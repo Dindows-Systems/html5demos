@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.common.key.js" ></script>
+    <script src="../libraries/RGraph.pie.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Reasons I became an engineer</title>
+</head>
+<body>
+
+    <h1>Reasons I became an engineer</h1>
+
+    <canvas id="cvs" width="450" height="300">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var pie = new RGraph.Pie('cvs', [5,5,90]);
+            pie.Set('chart.key', ['Have a good job','Challenge myself', 'Build the IronMan suit']);
+            pie.Set('chart.key.position.graph.boxed', false);
+            pie.Set('chart.key.colors', ['red','blue','#0f0']);
+            pie.Set('chart.strokestyle', 'transparent');
+            pie.Set('chart.exploded', 8);
+            pie.Set('chart.shadow', true);
+            pie.Set('chart.gutter.top', 45);
+            pie.Set('chart.centerx', 150);
+            pie.Set('chart.colors', [
+                                     RGraph.RadialGradient(pie, 150,150,0,150,150,150, 'red', 'white'),
+                                     RGraph.RadialGradient(pie, 150,150,0,150,150,150, 'blue', 'white'),
+                                     RGraph.RadialGradient(pie, 150,150,0,150,150,150, '#0f0', 'white')
+                                    ]);
+            pie.Draw();
+        }
+    </script>
+
+    <p>        
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

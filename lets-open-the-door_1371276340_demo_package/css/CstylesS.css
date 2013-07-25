@@ -1,0 +1,116 @@
+/* Page Layout CSS */
+html {
+    box-shadow:inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+
+}
+    
+
+body {
+    font:14px normal normal "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+    margin:0px;
+}
+
+section, aside, nav {box-sizing:border-box;padding:10px 20px;}
+
+.red {background-color:red;}
+
+
+/* Style Transition */
+.control-buttons button {-webkit-transition:0.2s all ease-in-out;-moz-transition:0.2s all ease-in-out;-ms-transition:0.2s all ease-in-out;-o-transition:0.2s all ease-in-out;transition:0.2s all ease-in-out;}
+.g67fpicContainer img {-webkit-transition:1.2s all ease-in-out;-moz-transition:1.2s all ease-in-out;-ms-transition:1.2s all ease-in-out;-o-transition:1.2s all ease-in-out;transition:1.2s all ease-in-out;}
+
+.control-buttons button {background-color:rgba(0, 0, 0, 0.82);cursor:pointer;color:
+rgba(230, 230, 230, 0.82);border:0px solid transparent;padding:4px 10px;border-radius:8px;font-size:10px;}
+.control-buttons:hover button {color:#fff;}
+.control-buttons button:hover {background-color:rgba(58, 162, 83, 0.82);}
+.control-buttons button:active {background-color:rgba(58, 162, 83, 1);}
+
+
+/* Door Style */
+
+/* Animation */
+.doorBox .door,.doorBox .door.closed {-webkit-transition:0.8s all ease-in-out;-moz-transition:0.8s all ease-in-out;-ms-transition:0.8s all ease-in-out;-o-transition:0.8s all ease-in-out;transition:0.8s all ease-in-out;}
+
+
+.doorBox {z-index:13;position:fixed;background-color:grey;top:0px;bottom:0px;left:0px;right:0px;
+background: url('../img/n_background.png') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+.doorBox .door {z-index:14;display:inline-block;width:49.5%;height:100%;background-image:url('../door-text.png');background-repeat:repeat;}
+
+.door1 {position:relative;left:0%;border-right:4px solid rgb(51, 111, 158);}
+.door2 {position:relative;right:0%;border-left:4px solid rgb(51, 111, 158);}
+
+.door1.closed {position:relative;left:-50%;}
+.door2.closed {position:relative;right:-50%;}
+
+
+
+
+
+/* Intro Type */
+.myintro {
+    z-index:9;
+    display:block;
+    width:100%;
+    position:absolute;
+    top:0px;
+    margin:0 auto;
+    text-align:center;
+    padding:10px;
+}
+
+.myintro .intro-inR {
+    padding:20px;
+    background-color:
+rgba(0, 0, 0, 0.35);
+    display:inline-block;
+    border-radius:10px;
+    color:#fff;
+    text-shadow:0px 0px 10px #000;
+}
+
+.myintro .intro-inR .g67fpicContainer {
+    padding:8px;
+}
+
+.myintro .intro-inR .g67fpicContainer img {
+    width:80px;height:80px;
+    border:6px solid rgba(255, 255, 255, 0.72);border-radius:50%;
+    box-shadow: 0px 0px 12px #000;
+    
+}
+
+.myintro .intro-inR .g67fpicContainer img:hover {
+-webkit-transform:rotate(360deg);
+-moz-transform:rotate(360deg);
+}
+
+
+.planet-pic {
+    position:absolute;
+    top:10px;
+    left:10px;  
+}
+.planet-pic img  {width:100px;}
+
+.planet-pic {-webkit-transform:rotate(1360deg);-webkit-animation-name: planetR;-webkit-animation-duration:40s;-webkit-animation-fill-mode:both;}
+
+@-webkit-keyframes planetR {
+	0% {left:10px;}
+	50% {left:880px;}
+	55% {top:50px;}
+	60% {top:100px;}
+	62% {top:120px;}
+	63% {top:160px;}
+	63% {top:160px;}
+	65% {-webkit-transform:(0.2);}
+	70% {-webkit-transform:scale(1);}
+}
+
+

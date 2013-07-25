@@ -1,0 +1,48 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Things to release at a wedding ceremony</title>
+</head>
+<body>
+
+    <div style="text-align: center; font-family: Comic sans MS; width: 800px">
+        <h1>Things to release at a wedding ceremony</h1>
+    
+        <canvas id="cvs" width="800" height="250">[No canvas support]</canvas>
+    
+        <script>
+            window.onload = function ()
+            {
+                var bar5 = new RGraph.Bar('cvs', [50,40,10,-25,-50,50]);
+                bar5.Set('chart.colors', ['black']);
+                bar5.Set('chart.labels.above', true);
+                bar5.Set('chart.ylabels.specific', [
+                                                    'Very cool',
+                                                    '','','','','','','','','','','','','','','','','','','','',
+                                                    '','','','','','','','','','','','','','','','','','','','',
+                                                    'Uncool']);
+                bar5.Set('chart.gutter.left', 100);
+                bar5.Set('chart.gutter.bottom', 125);
+                bar5.Set('chart.variant', 'sketch');
+                bar5.Set('chart.variant.sketch.verticals', false);
+                bar5.Set('chart.text.font', 'Comic sans MS');
+                bar5.Set('chart.text.size', 16);
+                bar5.Set('chart.background.grid', false);
+                bar5.Set('chart.labels.above.specific', ['Butterflies', 'Doves', 'Pidgeons', 'Wasps', 'Prisoners', 'The Kraken']);
+                bar5.Draw();
+            }
+        </script>
+    </div>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

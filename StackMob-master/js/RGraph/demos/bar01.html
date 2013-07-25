@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A basic Bar chart</title>
+</head>
+<body>
+
+    <h1>A basic Bar chart</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var bar = new RGraph.Bar('cvs', [5,4,1,6,8,5,3]);
+            bar.Set('chart.labels', ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']);
+            bar.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+/*
+HTML 5 Template Name: FusionEdge
+File: Navigation CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+nav ul{margin:0; padding:0; list-style:none;}
+
+/* ----------------------------------------------Top Navigation-------------------------------------*/
+
+#topnav{padding:20px 0;}
+#topnav li{float:left; margin-right:30px; text-transform:uppercase;}
+#topnav li li{margin-left:0;}
+#topnav li a:link, #topnav li a:visited, #topnav li a:hover{display:block; margin:0; padding:0; color:#C0BAB6; background-color:#232323;}
+#topnav ul ul li a:link, #topnav ul ul li a:visited{border:none;}
+#topnav li a:hover, #topnav li.active a{color:#FF9900; background-color:#232323;}
+#topnav li li a:link, #topnav li li a:visited{width:150px; float:none; margin:0; padding:7px 10px; color:#666666; background-color:#F9F9F9; border:none;}
+#topnav li li a:hover{color:#FF9900; background-color:#F9F9F9;}
+#topnav ul ul{z-index:9999; position:absolute; left:-999em; height:auto; width:170px; padding:5px 0 0 0; border-bottom:1px solid #666666;}
+#topnav ul ul a{width:140px;}
+#topnav li:hover ul{left:auto;}
+#topnav li:hover{position:static;}
+#topnav li.last{margin-right:0;}
+
+/* ----------------------------------------------Column Navigation-------------------------------------*/
+
+#container aside nav{display:block; width:300px; margin-bottom:30px;}
+#container aside nav ul{margin:0; padding:0; list-style:none;}
+#container aside nav li{margin:0 0 3px 0; padding:0;}
+#container aside nav ul ul, #container aside nav ul ul ul, #container aside nav ul ul ul ul, #container aside nav ul ul ul ul ul{border-top:none; padding-top:0;}
+#container aside nav a{display:block; margin:0; padding:5px 10px 5px 20px; color:#666666; background:url("../images/orange_file.gif") no-repeat 10px center #FFFFFF; text-decoration:none; border-bottom:1px dotted #666666;}
+#container aside nav a:hover{color:#FF9900; background-color:#FFFFFF;}
+#container aside nav ul ul a, #container aside nav ul ul ul a, #container aside nav ul ul ul ul a, #container aside nav ul ul ul ul ul a{background:url("../images/black_file.gif") no-repeat #FFFFFF;}
+#container aside nav ul ul a{padding-left:40px; background-position:30px center;}
+#container aside nav ul ul ul a{padding-left:50px; background-position:40px center;}
+#container aside nav ul ul ul ul a{padding-left:60px; background-position:50px center;}
+#container aside nav ul ul ul ul ul a{padding-left:70px; background-position:60px center;}

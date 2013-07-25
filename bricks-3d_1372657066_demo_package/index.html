@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bricks</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="overlay"></div>
+<div id="overlay-small"></div>
+<div id="intro">
+	<h1>Welcome to Bricks 3D!</h1>
+
+	<p>This game uses the following technologies:</p>
+	<dl>
+		<dt>WebGL:</dt>
+		<dd>A JavaScript API for rendering interactive 3D and 2D graphics within the browser, without the user of any plug-ins, and takes advantage of hardware acceleration on the GPU.</dd>
+		<br><br>
+		<dt>Three.js:</dt>
+		<dd>This lightweight JavaScript library has been used for creating and displaying 3D graphics on the web browser using WebGL.</dd>
+		<br><br>
+		<dt>Stats.js:</dt>
+		<dd>This class has been used for monitoring the performance of the game.</dd>
+	</dl>
+	<p>Press the button below to start the game</p>
+
+	<p class="start"><a class="button">Start</a></p>
+</div>
+<div id="paused">
+	<p>Game paused...press the button below to continue</p>
+
+	<p class="continue"><a class="button">Continue</a></p>
+</div>
+<div id="game-stats">
+	<dl>
+		<dt class="score">Score:</dt>
+		<dd class="score">0</dd>
+		<br>
+		<dt class="lives">Lives:</dt>
+		<dd class="lives">2</dd>
+	</dl>
+</div>
+<div id="lose">
+	<h1>Game over!</h1>
+
+	<p>Press the button below to restart the game</p>
+
+	<p class="restart"><a href="" class="button">Restart</a></p>
+</div>
+<div id="reset">
+	<h1>Ball missed!</h1>
+	<p>Press the button below to continue</p>
+
+	<p class="reset"><a class="button">Continue</a></p>
+</div>
+<div id="win">
+	<h1>Level Complete!</h1>
+</div>
+<script type="text/javascript" src="libraries/jquery.min.js"></script>
+<script type="text/javascript" src="libraries/three.min.js"></script>
+<script type="text/javascript" src="libraries/stats.min.js"></script>
+<script type="text/javascript" src="data/game-data.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/objects/balls.js"></script>
+<script type="text/javascript" src="js/objects/bricks.js"></script>
+<script type="text/javascript" src="js/objects/paddles.js"></script>
+<script type="text/javascript" src="js/objects/walls.js"></script>
+<script type="text/javascript" src="js/lights/lights.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/start.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

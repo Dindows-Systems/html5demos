@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.line.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>UFO sightings over time</title>
+</head>
+<body>
+
+    <h1>UFO sightings over time</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var line = new RGraph.Line('cvs', [1,2,3,4,5,6,7,8,9,10,98]);
+            line.Set('chart.linewidth', 2);
+            line.Set('chart.tickmarks', 'arrow');
+            line.Set('chart.labels', ['1900','1920','1940','1960','1980','2000']);
+            line.Set('chart.shadow', true);
+            line.Set('chart.ylabels.specific', [
+                                                'Quite\r\nconvincing',
+                                                '','','',
+                                                'Fairly\r\nconvincing',
+                                                '','','',
+                                                'Not\r\nconvincing']);
+            line.Set('chart.gutter.left', 80);
+            line.Set('chart.gutter.right', 30);
+            line.Set('chart.labels.ingraph', [,,,,,,,,,'Release of Photoshop 1.0']);
+            line.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

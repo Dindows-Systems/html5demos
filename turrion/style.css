@@ -1,0 +1,277 @@
+html{
+background:url(images/html_bg.jpg) repeat;
+}
+body
+{
+background:url(images/bg.jpg) repeat-x top;
+font-family:Arial, Helvetica, sans-serif;
+padding:0;
+font-size:12px;
+margin:0px auto auto auto;
+color:#000;
+}
+a{
+color:#d73508;
+text-decoration:none;
+}
+h1{
+font-size:30px;
+margin:0px;
+padding:10px 0 10px 0;
+color:#FFFFFF;
+font-weight:normal;
+}
+.clear{
+clear:both;
+}
+p{
+padding:5px 0 5px 0;
+margin:0px;
+text-align:justify;
+line-height:19px;
+}
+.wrap{
+width:880px;
+margin:auto;
+padding:0 40px 0 40px;
+background:url(images/header_bg.jpg) no-repeat top right;
+}
+.header{
+width:880px;
+height:80px;
+}
+.logo{
+padding:20px 0 0 0px;
+float:left;
+}
+/*-----------------------------menu-------------------*/
+#menu{
+width:880px;
+height:38px;
+background:url(images/menu_bg.jpg) no-repeat center;
+margin:auto;
+clear:both;
+float:left;
+}
+#menu ul{
+width: auto;
+float:left;
+display:block;
+list-style:none;
+padding:2px 0 0 130px;
+margin:0px;
+text-align:center;
+}
+#menu ul li{
+display:inline;
+padding:0px;
+margin:0px;
+height:37px;
+}
+#menu ul li a{
+display:block;
+padding:0px;
+padding:0 17px 0 17px;
+float:left;
+text-decoration:none;
+text-align:center;
+color:#fff;
+font-size:13px;
+line-height:34px;
+}
+#menu ul li.selected a{
+display:block;
+padding:0px;
+padding:0 17px 0 17px;
+float:left;
+text-decoration:none;
+text-align:center;
+color:#fff;
+font-size:13px;
+line-height:34px;
+background:url(images/bt_a.jpg) no-repeat center;
+}
+#menu ul li a:hover{
+color:#fff;
+text-decoration:none;
+background:url(images/bt_a.jpg) no-repeat center;
+}
+/*----------------tab_bg---------*/
+.tab_bg{
+width:880px;
+height:237px;
+clear:both;
+margin:15px 0 0 0;
+float:left;
+background:url(images/tab_bg.jpg) no-repeat center;
+}
+.tab_left{
+width:225px;
+float:left;
+padding:25px 0 0 10px;
+}
+.middle_text{
+width:300px;
+float:left;
+padding:10px 0 0 10px;
+}
+.middle_text p{
+color:#FFFFFF;
+}
+.tabs{
+width:276px;
+float:right;
+padding:10px 25px 0 0;
+}
+.tab{
+display:block;
+width:276px;
+height:67px;
+margin:0 0 4px 0;
+background:url(images/tab_bg.png) no-repeat center bottom;
+_background:url(images/tab_bg.gif) no-repeat center bottom;
+text-decoration:none;
+}
+p.tab_text{
+width:190px;
+color:#FFFFFF;
+padding:20px 0 0 10px;
+}
+p.tab_text a{
+font-size:14px;
+font-weight:bold;
+color:#deff6b;
+text-decoration:none;
+}
+img.tab_icon{
+float:right;
+padding:0px 5px 0 0px;
+}
+span.green{
+font-size:14px;
+font-weight:bold;
+color:#deff6b;
+}
+/*-------------------center_content------------*/
+.center_content{
+width:880px;
+clear:both;
+padding:0 0 50px;
+}
+.left_content{
+width:400px;
+float:left;
+padding:10px 0 0 20px;
+}
+.right_content{
+width:400px;
+float:left;
+padding:10px 0 0 30px;
+}
+.title{
+color:#313e40;
+font-size:18px;
+padding:15px 0 0 0;
+clear:both;
+}
+.title span{
+color:#d54525;
+}
+.read_more_tab{
+width:400px;
+height:19px;
+text-align:right;
+padding:0 10px 0 0;
+line-height:19px;
+}
+.read_more_tab a{
+text-decoration:none;
+color:#65ad0f;
+}
+.list_tab{
+width:370px;
+float:left;
+clear:both;
+padding:10px 0 10px 0;
+}
+p.list{
+width:335px;
+float:left;
+padding:0 0 0 10px;
+}
+img.arrow{
+width:23px;
+float:left;
+padding:5px 0 0 0px;
+}
+
+
+/*-----------------testimonials-----------------*/
+.testimonials{
+width:375px;
+_width:365px;
+background:url(images/quotes_left.gif) no-repeat left top;
+padding:0 0 0 30px;
+float:left;
+margin:15px 0 5px 15px;
+_margin:15px 0 5px 5px;
+}
+.testimonials p{
+background:url(images/quotes_right.gif) no-repeat right bottom;
+padding:0 25px 15px 0;
+color:#D94F25;
+font-style:italic;
+}
+.test_author{
+float:right;
+padding:0 25px 0 0;
+font-style:italic;
+color:#000;
+}
+
+img.phone_icon{
+float:left;
+}
+.info_box{
+padding:10px 0 0 0;
+}
+p.info{
+float:left;
+padding:0 0 0 10px;
+line-height:23px;
+}
+span.red{
+color:#D94F25;
+font-size:12px;
+font-weight:bold;
+}
+/*-----------------------------footer------------------*/
+#footer{
+clear:both;
+width:880px;
+height:65px;
+margin:auto;
+color:#003156;
+border-top:1px #B2BFA7 dotted;
+}
+.copyright{
+float:right;
+padding-left:10px;
+padding-top:10px;
+}
+.footer_links{
+float:left;
+padding-right:15px;
+padding-top:13px;
+}
+.footer_links a{
+text-decoration:none;
+color: #003156;
+padding-left:10px;
+}
+.footer_links a:hover{
+text-decoration:underline;
+color: #003156;
+}
+
+

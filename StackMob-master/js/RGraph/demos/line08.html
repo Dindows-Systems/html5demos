@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.common.dynamic.js" ></script>
+    <script src="../libraries/RGraph.common.tooltips.js" ></script>
+    <script src="../libraries/RGraph.common.effects.js" ></script>
+    <script src="../libraries/RGraph.common.key.js" ></script>
+    <script src="../libraries/RGraph.line.js" ></script>
+    <script src="../libraries/jquery.min.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Combining more then two Line objects</title>
+</head>
+<body>
+
+    <h1>Combining more than two Line objects with multiple Y axes</h1>
+    
+    <p>
+        This demonstration shows how you can use the DrawAxes() API method to draw multiple axes on your chart. Here there are tooltips
+        so the axes are drawn in the custom ondraw event (otherwise the extra axes would be lost when the chart is redrawn). You'll
+        find this page in the demos folder (<i>demos/line08.html</i>) of the download.
+    </p>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var gutterLeft = 150;
+            var gutterRight = 10;
+
+            var line1 = new RGraph.Line('cvs', [1,3,5,2,5,6,8,4,4,5,3,6]);
+            line1.Set('chart.ymax', 10);
+            line1.Set('chart.hmargin', 5);
+            line1.Set('chart.gutter.right', gutterRight);
+            line1.Set('chart.gutter.left', gutterLeft);
+            line1.Set('chart.labels', ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']);
+            line1.Set('chart.tooltips', ['rJan','rFeb','rMar','rApr','rMay','rJun','rJul','rAug','rSep','rOct','rNov','rDec']);
+            line1.Set('chart.colors', ['red', 'green', 'blue']);
+            line1.Set('chart.key', ['Flow rate', 'Speed', 'Pressure']);
+            line1.Set('chart.key.position', 'gutter');
+            line1.Set('chart.key.position.gutter.boxed', false);
+            line1.Set('chart.key.position.x', 280);
+            line1.Set('chart.noaxes', true);
+            line1.Set('chart.ylabels', false);
+            line1.Draw();
+    
+            var line2 = new RGraph.Line('cvs', [54,53,56,58,57,53,49,52,53,56,61,58]);
+            line2.Set('chart.ymax', 100);
+            line2.Set('chart.background.grid', false);
+            line2.Set('chart.colors', ['green']);
+            line2.Set('chart.hmargin', 5);
+            line2.Set('chart.noaxes', true);
+            line2.Set('chart.gutter.right', gutterRight);
+            line2.Set('chart.gutter.left', gutterLeft);
+            line2.Set('chart.tooltips', ['gJan','gFeb','gMar','gApr','gMay','gJun','gJul','gAug','gSep','gOct','gNov','gDec']);
+            line2.Set('chart.ylabels', false);
+            line2.Draw();
+    
+            var line3 = new RGraph.Line('cvs', [31,35,32,36,34,32,33,35,28,17,18,18]);
+            line3.Set('chart.ymax', 50);
+            line3.Set('chart.background.grid', false);
+            line3.Set('chart.ylabels', false);
+            line3.Set('chart.noaxes', true);
+            line3.Set('chart.colors', ['blue']);
+            line3.Set('chart.hmargin', 5);
+            line3.Set('chart.gutter.right', gutterRight);
+            line3.Set('chart.gutter.left', gutterLeft);
+            line3.Set('chart.tooltips', ['bJan','bFeb','bMar','bApr','bMay','bJun','bJul','bAug','bSep','bOct','bNov','bDec']);
+    
+    
+    
+            /**
+            * This draws the extra axes. It's run whenever the line3 object is drawn
+            */
+            myFunc = function ()
+            {
+                RGraph.DrawAxes(line1, {
+                                        'axis.x': 150,
+                                        'axis.y': 25,
+                                        'axis.color': 'red',
+                                        'axis.text.color': 'red',
+                                        'axis.max': 10,
+                                        'axis.min': 0
+                                       });
+                RGraph.DrawAxes(line2, {
+                                        'axis.x': 100,
+                                        'axis.y': 25,
+                                        'axis.color': 'green',
+                                        'axis.text.color': 'green',
+                                        'axis.max': 100
+                                       });
+                RGraph.DrawAxes(line3, {
+                                        'axis.x': 50,
+                                        'axis.y': 25,
+                                        'axis.color': 'blue',
+                                        'axis.text.color': 'blue',
+                                        'axis.max': 50
+                                       });
+            };
+            RGraph.AddCustomEventListener(line3, 'ondraw', myFunc);
+    
+    
+    
+            line3.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

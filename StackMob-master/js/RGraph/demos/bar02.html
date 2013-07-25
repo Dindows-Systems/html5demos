@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A grouped Bar chart</title>
+</head>
+<body>
+
+    <h1>A grouped Bar chart</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            var bar5 = new RGraph.Bar('cvs', [[45,60,112],[65,30,50],[40,80,70],[115,100,92]]);
+            bar5.Set('chart.colors', ['#CC1111', '#11CCCC', '#1111CC']); 
+            bar5.Set('chart.labels', ['Bob', 'Jamie', 'Cynthia', 'Peter']);
+            bar5.Set('chart.strokestyle', 'transparent');
+            bar5.Set('chart.ymax', 150);
+            bar5.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

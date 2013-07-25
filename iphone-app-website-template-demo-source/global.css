@@ -1,0 +1,27 @@
+/* @group globals */
+* { margin: 0; padding: 0; }
+html { height: 101%; }
+body { font-size: 62.5%; font-family: Arial, Tahoma, sans-serif; background: #fff url('img/bg.gif') repeat-x; padding-top: 35px; }
+
+img { border: 0; }
+
+h2 { font-family: "Trebuchet MS", Tahoma, Arial, sans-serif; color: #555; font-size: 3.3em; line-height: 1.5em; font-weight: normal; margin-bottom: 20px; }
+
+h2 em { color: #cda7bd; }
+
+/* @group core body */
+#iphone-preview { text-align: center; border-bottom: 1px solid #b4ada8; margin-bottom: 12px; }
+#iphone-preview img { margin: 0; margin-bottom: -2px; }
+
+.wrap { width: 660px; margin: 0 auto; }
+
+/* @group email */
+#mc-embedded-subscribe-form { width: 100%; text-align: center; }
+#mce-EMAIL { display: block; font-size: 1.9em; font-style: italic; padding: 10px 15px; color: #999; font-family: Arial, Tahoma, sans-serif; border: 1px solid #e1c7d6; width: 400px; font-weight: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; outline: none; background: #fefafc; }
+#mce-EMAIL:hover, #mce-EMAIL:focus { background: #fcf5f9; color: #444; }
+.btn { padding: 10px 14px; font-size: 100px; color: #666; margin-top: 15px; }
+.btn:hover { cursor: pointer; }
+
+.mce_inline_error { font-weight: bold; margin-top: 6px; color: #8d664c; font-size: 1.3em; }
+
+#mce-success-response { text-align: left; padding: 13px 10px; background: #e6f8ea; width: 400px; font-size: 1.3em; color: #546959; margin: 0 auto; font-weight: bold; border: 1px solid #c8decd; }

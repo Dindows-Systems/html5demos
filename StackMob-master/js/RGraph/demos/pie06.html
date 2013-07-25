@@ -1,0 +1,45 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.common.key.js" ></script>
+    <script src="../libraries/RGraph.pie.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Why I don't have a girlfriend</title>
+</head>
+<body>
+
+    <h1>Why I don't have a girlfriend</h1>
+
+    <canvas id="cvs" width="770" height="300">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var pie = new RGraph.Pie('cvs', [2,2,2,2,92]);
+            pie.Set('chart.key', [
+                                  "I'm only average looking but have a fun personality",
+                                  "I'm shy around girls but great once I get to know them",
+                                  "I don't hang out with the popular crowd but have fun, close friends",
+                                  "I can't afford to buy her nice things, but am willing to put in time and effort",
+                                  "I'm a level 80 Paladin"
+                                 ]);
+            pie.Set('chart.key.graph.boxed', false);
+            pie.Set('chart.key.position.y', 50);
+            pie.Set('chart.strokestyle', 'transparent');
+            pie.Set('chart.exploded', 8);
+            pie.Set('chart.centerx', 150);
+            pie.Set('chart.shadow', true);
+            pie.Draw();
+        }
+    </script>
+
+    <p>        
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

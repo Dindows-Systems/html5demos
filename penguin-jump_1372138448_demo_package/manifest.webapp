@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "Penguin Jump",
+  "description": "Puzzle Game.",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/images/icons/Icon-16.png",
+    "32": "/images/icons/Icon-32.png",
+    "48": "/images/icons/Icon-48.png",
+    "60": "/images/icons/Icon-60.png",
+    "64": "/images/icons/Icon-64.png",
+    "128": "/images/icons/Icon-128.png"
+  },
+  "developer": {
+    "name": "TechTree IT Systems Pvt. Ltd.",
+    "url": "http://www.techtreeit.com"
+  },
+  "installs_allowed_from": ["*"],
+  
+  "orientation": ["portrait"]
+  
+}

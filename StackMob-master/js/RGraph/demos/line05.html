@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.line.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A curvy line chart</title>
+</head>
+<body>
+
+    <h1>A curvy line chart</h1>
+    
+    <p>
+        You can get curvy Line charts by setting chart.curvy to true. Because it's curvy it's less accurate.
+    </p>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var line = new RGraph.Line('cvs', [84,5,30,26,45,12,84,23,60]);
+            line.Set('chart.labels', ['Felicity','Gary','Neil','Jay','Helga','Ray','Kev','Luis','Pete']);
+            line.Set('chart.curvy', !RGraph.isOld());
+            line.Set('chart.curvy.factor', 0.1);
+            line.Set('chart.background.grid', false);
+            line.Set('chart.background.barcolor1', 'white');
+            line.Set('chart.background.barcolor1', '#eef');
+            line.Set('chart.shadow', true);
+            line.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

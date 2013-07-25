@@ -1,0 +1,35 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.line.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A curvy Line chart with multiple lines</title>
+</head>
+<body>
+
+    <h1>A curvy Line chart with multiple lines</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var line = new RGraph.Line('cvs', [4,5,1,6,3,5,2], [4,8,6,5,3,2,5], [12,9,8,6,7,9,11], [4,5,1,2,6,4,3]);
+            line.Set('chart.curvy', true);
+            line.Set('chart.linewidth', 3);
+            line.Set('chart.hmargin', 5);
+            line.Set('chart.labels', ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']);
+            line.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

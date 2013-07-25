@@ -1,0 +1,1 @@
+if( ! StackMob.hasValidOAuth() ) console.log( "OAuth access token has expired." );

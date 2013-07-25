@@ -1,0 +1,23 @@
+/*
+HTML 5 Template Name: FusionEdge
+File: Homepage CSS
+Author: OS Templates
+Author URI: http://www.os-templates.com/
+Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+#container #homepage{display:block; width:100%; line-height:1.6em;}
+
+#container #homepage #intro{margin-bottom:10px;}
+#container #homepage #intro article{}
+#container #homepage #intro article img{margin:0 0 15px 0; padding:4px; border:1px solid #D6D6D6;}
+#container #homepage #intro article h2{font-size:14px; font-weight:bold;}
+#container #homepage #intro article p{margin:10px 0; padding:0;}
+
+#container #homepage #services{}
+#container #homepage #services article{margin-top:20px; padding-top:15px; border-top:1px solid #D6D6D6;}
+#container #homepage #services article figure{}
+#container #homepage #services article figure img{margin:0 0 15px 0; padding:4px; float:left; border:1px solid #D6D6D6;}
+#container #homepage #services article figure figcaption{display:block; float:right; width:230px;}
+#container #homepage #services article figure figcaption h2{font-size:14px; font-weight:bold; margin:2px 0 5px 0; padding:0;}
+#container #homepage #services article figure figcaption p{margin:0; padding:0; line-height:normal;}

@@ -1,0 +1,77 @@
+/* Page-level */
+body { 
+	margin:0; 
+	padding:0; 
+	background:white; 
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size:14px; 
+	}
+	
+#page { 
+	width:1000px;
+	background:white; 
+	border:1px solid black; 
+	margin:auto;
+	padding:0;
+	}
+	
+/* Note: Make HTML 5 elements block-level for consistent styling */
+header, nav, article, footer, address { display:block; }
+
+/* Sections */
+header, footer { width:100%; clear:both; }
+
+header { 
+	height:100px;
+	width:960px;
+	padding:20px;
+	background:black;
+	color:#ccc; 
+	}
+	
+nav { 
+	float:left; 
+	width:210px; 
+	margin:20px;
+	}
+	nav ul { 
+		list-style:none; 
+		list-style-type:none; 
+		margin:0; 
+		padding:0; 
+		font-size:1.6em; 
+		font-weight:bold; 
+		} 
+		nav ul li { 
+			margin:5px;  
+			}
+
+#posts {
+	width:700px; 
+	margin:20px 10px 10px 260px; 
+	}
+
+footer { 
+	font-size:0.8em;
+	font-weight:bold; 
+	text-align:center; 
+	background:#ccc;
+	height:200px;
+	margin-top:25px; 
+	padding-top:20px;
+	}
+
+/* Content */
+h1 { font-size: 4.5em; }
+h2 { font-size: 2.0em; margin:0; }
+h3 { font-size: 1.4em; margin:0; }
+p { font-size: 1.0em; }
+
+article { 
+	border-bottom: 1px dashed gray; 
+	margin-bottom: 20px; 
+	}
+article p 
+	padding:10px; 
+	} 
+

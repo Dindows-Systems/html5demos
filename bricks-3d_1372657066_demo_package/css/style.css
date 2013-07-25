@@ -1,0 +1,169 @@
+body {
+	margin    : 0;
+	padding   : 0;
+	font-size : 12px;
+}
+
+canvas {
+	width : 100%;
+}
+
+#overlay,
+#overlay-small {
+	display       : none;
+	position      : absolute;
+	width         : 980px;
+	height        : 450px;
+	top           : 50%;
+	left          : 50%;
+	margin-left   : -490px;
+	margin-top    : -275px;
+	border        : 1px solid #333;
+	background    : black;
+	opacity       : 0.9;
+	border-radius : 5px;
+	box-shadow    : 0 0 20px 0 black;
+}
+
+#overlay-small {
+	height : 275px;
+	width: 350px;
+	margin-left: -175px;
+}
+
+#intro,
+#lose,
+#reset {
+	display            : none;
+	position           : absolute;
+	width              : 980px;
+	height             : 550px;
+	top                : 50%;
+	left               : 50%;
+	margin-left        : -490px;
+	margin-top         : -275px;
+	-moz-box-sizing    : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing         : border-box;
+	padding            : 1em 5em;
+	color              : white;
+	font               : normal 1.25em/1 sans-serif;
+}
+
+h1 {
+	text-align     : center;
+	margin         : 1em 0;
+	text-transform : uppercase;
+}
+
+p {
+	margin : 1em 0;
+}
+
+p.start { }
+
+#paused p,
+#reset p,
+#lose p,
+#win p {
+	text-align: center;
+}
+
+.button {
+	margin          : 2em auto;
+	text-align      : center;
+	width           : 5em;
+	padding         : 1em;
+	display         : block;
+	color           : lightgray;
+	border          : 1px solid green;
+	border-radius   : 5px;
+	background      : darkgreen;
+	text-decoration : none;
+	text-transform  : uppercase;
+	cursor          : pointer;
+	opacity         : 1;
+	font-weight     : bold;
+	font-size       : 1.25em;
+}
+
+.button:hover {
+	background-color : green;
+	box-shadow       : 0 0 20px 0 #555;
+}
+
+#paused {
+	display            : none;
+	position           : absolute;
+	width              : 500px;
+	height             : 250px;
+	top                : 50%;
+	left               : 50%;
+	margin-left        : -250px;
+	margin-top         : -125px;
+	-moz-box-sizing    : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing         : border-box;
+	padding            : 1em 5em;
+	color              : white;
+	font               : normal 1.25em/1.5 sans-serif;
+	text-align         : center;
+}
+
+#game-stats {
+	display            : block;
+	position           : absolute;
+	width              : 120px;
+	height             : 60px;
+	top                : 1%;
+	right              : 1%;
+	-moz-box-sizing    : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing         : border-box;
+	padding            : 7px;
+	color              : white;
+	font               : normal 1.25em/1.5 sans-serif;
+	background         : black;
+	border             : 1px solid #333;
+	opacity            : 0.9;
+	border-radius      : 5px;
+	box-shadow         : 0 0 20px 0 black;
+}
+
+dl {
+	margin  : 0;
+	padding : 0;
+}
+
+dt {
+	display     : inline;
+	margin      : 0;
+	padding     : 0;
+	line-height : 1.5;
+	font-weight: bold;
+}
+
+dd {
+	display     : inline;
+	margin      : 0;
+	padding     : 0;
+	line-height : 1.5;
+}
+
+#win {
+	display            : none;
+	position           : absolute;
+	width              : 500px;
+	height             : 250px;
+	top                : 50%;
+	left               : 50%;
+	margin-left        : -250px;
+	margin-top         : -125px;
+	-moz-box-sizing    : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing         : border-box;
+	padding            : 1em 5em;
+	color              : white;
+	font               : normal 1.25em/1.5 sans-serif;
+	text-align         : center;
+}

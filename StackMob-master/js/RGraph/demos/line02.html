@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.line.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A dynamic Line chart showing server load</title>
+</head>
+<body>
+
+    <h1>A dynamic Line chart showing server load</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+    
+    <script>
+        /**
+        * Get the data from localStorage. This allows it to persist across page refreshes.
+        * As it's stored as a string it needs o be converted to an array and then it must
+        * be 60 elements long.
+        */
+        data  = window.localStorage['rgraph_load_example'];
+        data  = RGraph.array_pad(data ? data.split(/,/) : [0.5], 60, null);
+
+
+
+        /**
+        * The delay in milliseconds - ie 60 seconds
+        */
+        delay = 60000;
+
+
+
+        /**
+        * This function draws the chart, making use of the data variable
+        */
+        function DrawChart ()
+        {
+            // Clear the canvas first
+            RGraph.Clear(document.getElementById('cvs'));
+
+            for (var i=0; i<data.length; ++i) {
+                if (!data[i]) {
+                    data[i] = null;
+                }
+            }
+
+            var line = new RGraph.Line('cvs', data);
+            line.Set('chart.background.grid.autofit.numvlines', 60);
+            line.Set('chart.background.grid.autofit.numhlines', 10);
+            line.Set('chart.title.xaxis', 'Last 60 minutes (updates every minute)');
+            line.Set('chart.title.xaxis.pos', 0.5);
+            line.Set('chart.numxticks',0.001);
+            line.Set('chart.numyticks', 0);
+            line.Set('chart.ymax', 1);
+            line.Set('chart.scale.decimals', 1);
+            line.Set('chart.curvy', true);
+            line.Draw();
+        }
+
+
+
+        /**
+        * This function adds on to the data array and removes one
+        * from the start. This gives the chart the appearance of
+        * growing to the right. It is called every second but only
+        * adds new data every 60 seconds. This imulates minutely
+        * updates.
+        */
+        function Update ()
+        {
+                data = RGraph.array_shift(data);
+            var last = data[data.length - 1] ? data[data.length - 1] : 0.5;
+
+            /**
+            * This is the bit of code that geneates random data that represents the server load.
+            * You could just as easily make this an AJAX call to a server-side script to get
+            * real data.
+            */
+            var value = last + RGraph.random(-0.1, 0.1, 2);
+                value = Math.min(value, 1);
+                value = Math.max(value, 0);
+
+
+            data.push(value);
+            window.localStorage['rgraph_load_example'] = data.join(',');
+
+            DrawChart();
+            setTimeout(Update, delay);
+        }
+
+        DrawChart();
+        setTimeout(Update, delay);
+    </script>
+    
+    <br />
+    
+    <button onclick="window.localStorage['rgraph_load_example'] = '0.5'; location.href = location.href">Clear data</button>
+    
+    <script>
+        document.write('<small>Page loaded: ' + new Date() + '</small>');
+    </script>
+
+    <p>
+        There's another dynamically updating Line chart <a href="http://dev.rgraph.net/docs/dynamic.html"><b>here</b></a>.
+        
+        <br />
+        <br />
+        
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

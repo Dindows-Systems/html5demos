@@ -1,0 +1,40 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Amount of time spent on Google Earth</title>
+</head>
+<body>
+        
+    <h1>Amount of time spent on Google Earth</h1>
+
+    <canvas id="cvs" width="300" height="400">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            var bar6 = new RGraph.Bar('cvs', [2,2,96]);
+            bar6.Set('chart.variant', ['3d']);
+            bar6.Set('chart.units.post', '%');
+            bar6.Set('chart.colors.sequential', true);
+            bar6.Set('chart.colors', ['red','green','blue']);
+            bar6.Set('chart.labels', ['School\r\nresearch','General\r\nresearch','Finding your\r\nhouse']);
+            bar6.Set('chart.background.grid.autofit.numvlines', 6);
+            bar6.Set('chart.gutter.left', 50);
+            bar6.Set('chart.gutter.bottom', 50);
+            bar6 .Draw();
+        }
+    </script>
+
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

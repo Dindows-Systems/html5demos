@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+	margin:0;
+	padding:0;
+}
+html,body {
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+body {
+	font-family: 'Electrolize', Arial, sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	color: #000;
+	background:#333;
+	
+}
+a{
+	text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+/* The header*/
+#header{
+	position:absolute;
+	top:60px;
+	right:30px;
+}
+#header a{
+    display: inline-block;
+	font-size: 12px;
+	width: 60px;
+	height: 24px;
+	color: #000;
+	line-height: 24px;
+	text-align: center;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+	background: rgba(255,255,255,0.9);
+	text-transform: uppercase;
+}
+#header a:hover{
+	background: #ddd;
+	color: #000;
+}
+#header a.current-demo,
+#header a.current-demo:hover{
+	background: #CCC49F;
+	color: #fff;
+	cursor: default;
+}
+
+
+/*  The footer */
+.footer-top{
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(228, 225, 225, 0.2);
+	height:25px;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: absolute;
+	width:100%;
+	bottom:0px;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+}
+.footer-top a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #333;
+	text-shadow: 0px 1px 1px #fff;
+	display: block;
+	float: left;
+}
+.footer-top a:hover{
+	background: #b8b8b8;
+}
+.footer-top span.right{
+	float: right;
+}
+.footer-top span.right a{
+	float: left;
+	display: block;
+}

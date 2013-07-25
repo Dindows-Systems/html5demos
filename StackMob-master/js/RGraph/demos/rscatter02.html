@@ -1,0 +1,44 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.rscatter.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>An animated Rscatter chart</title>
+</head>
+<body>
+
+    <h1>An animated Rscatter chart</h1>
+    
+    <p>
+        This animation gradually adds points to the chart. The effect is not part of RGraph - but a custom one.
+    </p>
+
+    <canvas id="cvs" width="300" height="300">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var data = [];
+
+            var rscatter = new RGraph.Rscatter('cvs', data);
+            rscatter.Set('chart.ymax', 400);
+            rscatter.Set('chart.labels.axes', 'n');
+            rscatter.Set('chart.labels', ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']);
+            rscatter.Draw();
+            
+            for (var i=0; i<50; ++i) {
+                setTimeout('data.push(['+(360 * Math.random())+','+ RGraph.random(0,400) +', ["black","red","blue","green","pink"][RGraph.random(0,5)]]);RGraph.Clear(rscatter.canvas);RGraph.Redraw();', 10 * i);
+            }
+        }
+    </script>
+
+    <p>        
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

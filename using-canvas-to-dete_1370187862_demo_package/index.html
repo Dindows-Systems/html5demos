@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>图片中多图形边缘识别测试 | Multiple graphs detection from a picture</title>
+		<style>
+			canvas{box-shadow:3px 4px 5px #000;}
+			img {border: dashed 1px #ccc;}
+		</style>
+	</head>
+	<body>
+	<canvas id="cv1" width=100 height=100></canvas>
+	<img src="home_icon.png" id="edgeImg1" width=76 height=330 />
+	<img src="hot-share-v3.png" id="edgeImg2" width=157 height=144 />
+	<p>点击图片后即可将图片绘入canvas中，绘制完成后即自动识别当前画布中的图形</p>
+	<p>Click the pictures to render them to canvas, then the graphs in the picture will be detected.</p>
+	<p>浏览器支持：IE10+(用到了web worker,不用的话IE9+), FF20+, Chrome 24+</p>
+	<p>Browser compatibility tested: IE10+ (for web worker, IE9+ if not use it), FF20+, Chrome 24+</p>
+	
+	<script>
+		var c=document.getElementById("cv1");
+		var t=c.getContext("2d");
+
+		var imgs = document.getElementsByTagName('img');
+
+		[].forEach.call(imgs, function(v) {
+			v.addEventListener('click', renderCanvas);
+		})
+
+		function renderCanvas(e) {
+			if (!this.img) {
+				this.img = new Image;
+
+				this.img.src = this.src;
+				refreshImg(this.img);
+
+			} else {
+				refreshImg(this.img);
+			}
+		}
+
+		function refreshImg(img) {
+			c.width = img.width;
+			c.height = img.height;
+			t.clearRect(0, 0, c.width, c.height);
+			t.setTransform(1, 0, 0, 1, 0.5, 0.5);
+			t.strokeStyle = '#f00';
+			t.drawImage(img, 0, 0, img.width, img.height);
+
+			var data = t.getImageData(0, 0, c.width, c.height);
+
+			var worker = new Worker("worker.js"), coords = [];
+
+			worker.onmessage = function(e) {
+				var coord = e.data, isInner = false;
+
+				for (var i = 0; i < coords.length; i++) {
+					if (coord.minX >= coords[i].minX && coord.minY >= coords[i].minY
+						&& coord.maxX <= coords[i].maxX && coord.maxY <= coords[i].maxY) {
+						isInner = true;
+						break;
+					}
+				}
+
+				if (!isInner) {
+					coords.push(coord);
+					t.strokeRect(coord.minX, coord.minY, coord.maxX - coord.minX, coord.maxY - coord.minY);
+				}	
+			};
+
+			worker.postMessage(data);
+		}
+
+
+	</script>
+	</body>
+</html>

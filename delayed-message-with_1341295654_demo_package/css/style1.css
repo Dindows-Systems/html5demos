@@ -1,0 +1,41 @@
+/*left*/
+
+.slide-left{
+	line-height: 24px;
+	font-size: 11px;
+	background: rgba(255, 255, 255, 1);
+	text-transform: uppercase;
+	padding:0 10px;
+	position: fixed;
+	top: 5%;
+	left: 0px;
+	width: 100px;
+	height:90%;
+	border:2px dashed #FF0000;
+	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
+	-webkit-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+	-moz-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+	-o-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+	-ms-animation: slideOut 0.5s ease-in-out 0.3s backwards;
+	
+}
+@-webkit-keyframes slideOut{
+	0%{left:-30px; opacity: 0;}
+	100%{left:0px; opacity: 1;}
+}
+@-moz-keyframes slideOut{
+	0%{left:-30px; opacity: 0;}
+	100%{left:0px; opacity: 1;}
+}
+@-o-keyframes slideOut{
+	0%{left:-30px; opacity: 0;}
+	100%{left:0px; opacity: 1;}
+}
+@-ms-keyframes slideOut{
+	0%{left:-30px; opacity: 0;}
+	100%{left:0px; opacity: 1;}
+}
+@keyframes slideOut{
+	0%{left:-30px; opacity: 0;}
+	100%{left:0px; opacity: 1;}
+}

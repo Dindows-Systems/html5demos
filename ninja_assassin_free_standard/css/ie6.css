@@ -1,0 +1,8 @@
+body, html { height:100%; }
+#bg-y { height:100%; }
+
+#navigation ul 
+{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/navigation.png', sizingMethod='image'); }
+
+.portfolio-nav a 
+{ background: none; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/images/portfolio-button.png', sizingMethod='image'); }

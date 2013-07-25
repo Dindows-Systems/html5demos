@@ -1,0 +1,22 @@
+Structure:
+
+/html/layouts
+-> Used for Twitter Bootstrap layouts.
+
+/html/templates
+-> Used for backbone.js html templates.
+
+
+
+
+Javascript Optimization
+_______________________
+
+Create a server-side or client-side script that takes a list of CDN hosted Javascript files and runs them through a
+service like http://www.refresh-sf.com/yui/ whenever the list changes. The returned file can then be stored locally or
+hosted on a CDN and included automatically.
+
+Documentation
+_____________
+
+Adopt JSDoc or Natural Docs for comment specifications.

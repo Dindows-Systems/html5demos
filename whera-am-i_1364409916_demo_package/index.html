@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Where am I?</title>
+        <meta name="description" content="App show your location (lat, lon) and photos from Flickr near that location.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="css/styl.css">
+		<script type="text/javascript" src="js/cufon-yui.js"></script>
+		<script type="text/javascript" src="js/Remachine_Script_400.font.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaivn5bE7MtQL27MhA18pU97bxPtJs9wA&amp;sensor=false"></script>
+    </head>
+    <body>
+		<h1>Where am I?</h1>
+		<div>
+		<table>
+			<tr><td>Latitude:</td><td id="latitude"></td></tr>
+			<tr><td>Longitude:</td><td id="longitude"></td></tr>
+			<tr><td>Altitude:</td><td id="altitude"></td></tr>
+			<tr><td>Current time:</td><td id="time"></td></tr>
+		</table>
+		</div>
+		<div id="map">
+		</div>
+		<div id="images">
+		</div>
+	</body>
+</html>

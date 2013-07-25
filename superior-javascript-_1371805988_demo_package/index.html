@@ -1,0 +1,401 @@
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+		<title>Online JavaScript Redirection Script Generator Tool</title>
+		<meta name="description" content="With this JavaScript redirection script generator tool, the creation of cross-browser and fully compatible redirections for your website is solved."/>
+		
+		<link rel="canonical" href="http://online-marketing-technologies.com/tools/javascript-redirection-generator.html"/>
+		<meta http-equiv="refresh" content="0;URL=http://online-marketing-technologies.com/tools/javascript-redirection-generator.html">
+
+		<link rel="shortcut icon" type="image/x-icon" href="img/fav.ico"/>
+		<link rel="icon" type="image/x-icon" href="img/fav.ico"/>
+		<link rel="image_src" href="img/thumbnail.png"/>
+		
+		<style>
+			@font-face
+			{
+				font-family: 'BebasNeueRegular';
+				src: url('fonts/BebasNeue-webfont.eot');
+				src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+				url('fonts/BebasNeue-webfont.woff') format('woff'),
+				url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+				url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+			@font-face
+			{
+				font-family: 'allerregular';
+				src: url('aller_rg-webfont.eot');
+				src: url('aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+				url('aller_rg-webfont.woff') format('woff'),
+				url('aller_rg-webfont.ttf') format('truetype'),
+				url('aller_rg-webfont.svg#allerregular') format('svg');
+				font-weight: normal;
+				font-style: normal;
+			}
+			body
+			{
+				font-family: 'BebasNeueRegular';
+				color:black;
+				padding:0px;
+				margin:0px;
+				background: rgb(238,238,238); /* Old browsers */
+			}
+			.wrapper
+			{
+				width:100%;
+				height:100%;
+				background-image: url("background.png");
+			}
+			.header
+			{
+				width:100%;
+				height:85px;
+			}
+			.header-content
+			{
+				width:980px;
+				margin-left:auto;
+				margin-right:auto;
+				height:auto;
+				min-height:65px;
+			}
+			.h1-wrapper
+			{
+				width:auto;
+				height:auto;
+				float:left;
+				margin-top:-6px;
+			}
+			.header-content h1
+			{
+				float:left;
+			}
+			.extract
+			{
+				color:gray;
+				text-align:right;
+				text-transform: uppercase;
+				float:right;
+				width:500px;
+				height:auto;
+				min-height:40px;
+				display:block;
+				margin-top:11px;
+				font-size:18px;
+			}
+			.color-line
+			{
+				width:100%;
+				height:5px;
+				background-color:green;
+				background-image: url("background.png");
+			}
+			.black-line
+			{
+				width:100%;
+				height:25px;
+				background-color:black;
+				background-image: url("background.png");
+			}
+			.content
+			{
+				width:980px;
+				height:auto;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.left
+			{
+				float:left;
+				width:648px;
+				height:auto;
+			}
+			.right
+			{
+				float:right;
+				width:322px;
+				height:auto;
+			}
+			.right div
+			{
+				margin-left:20px;
+			}
+			.right li
+			{
+				margin-top:3px;
+				font-size:20px;
+			}
+			.tool
+			{
+				width:980px;
+				height:auto;
+				float:left;
+				margin-top:10px;
+			}
+			.content p
+			{
+				font-family: 'allerregular';
+				text-align:justify;
+				font-size:16px;
+			}
+			#myform
+			{
+				width:980px;
+				min-height:200px;
+				height:auto;
+				padding:0px;
+				margin:0px;
+			}
+			#delay
+			{
+				width:50px;
+			}
+			#url
+			{
+				width:796px;
+			}
+			#button
+			{
+				width:980px;
+				height:35px;
+				margin-top:5px;
+				margin-bottom:8px;
+			}
+			#output
+			{
+				width:980px;
+				height:180px;
+				margin-top:2px;
+			}
+			#delaycode, #nodelaycode
+			{
+				display:none;
+			}
+			a
+			{
+				text-decoration:none;
+				color:gray;
+				-webkit-transition: color 300ms linear;
+				-moz-transition: color 300ms linear;
+				-o-transition: color 300ms linear;
+				-ms-transition: color 300ms linear;
+				transition: color 300ms linear;
+			}
+			a:hover
+			{
+				color: green;
+				-webkit-transition: color 300ms linear;
+				-moz-transition: color 300ms linear;
+				-o-transition: color 300ms linear;
+				-ms-transition: color 300ms linear;
+				transition: color 300ms linear;
+			}
+			.share
+			{
+				float:right;
+				width:auto;
+				position:relative;
+				left:2px;
+			}
+			.pleaseshare
+			{
+				font-size:22px;
+				position:relative;
+				top:3px;
+				left:2px;
+			}
+			h1 a
+			{
+				color:black;
+			}
+			.loading-image{background:#FFF;display:block;height:100%;left:0;position:fixed;top:0;width:100%;z-index:90001}
+		</style>
+		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+		<script type="text/javascript">var switchTo5x=false;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "05200ff9-c9d9-4ba2-9efe-0361fb0fcfa8", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+		<script type="text/javascript">
+			String.prototype.replaceAll = function(str1, str2, ignore) 
+			{
+				return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+			}
+
+			function GenerateRedirect()
+			{
+				var RedirectText = document.getElementById('delaycode').value;
+				var Target = document.getElementById('url').value;
+				var Wait = document.getElementById('delay').value;
+
+				if(Wait == 0)
+				{
+					RedirectText = document.getElementById('nodelaycode').value;
+				}
+
+				RedirectText = RedirectText.replaceAll("REDIRECTTO",Target);
+				RedirectText = RedirectText.replaceAll("LATENCY",Wait);
+				document.getElementById('output').value = RedirectText;
+				document.getElementById('output').select();
+			}
+			
+			$(window).load(function(){$("#loading-image").fadeOut(200,function(){});});
+		</script>
+	</head>
+
+	<body>
+		<div id="loading-image" class="loading-image"></div>
+		<div class="wrapper">
+		<div class="header">
+			<div class="header-content">
+				<div class="h1-wrapper">
+					<h1><a href="http://online-marketing-technologies.com/tools/javascript-redirection-generator.html">JavaScript Redirection Script Tool</a></h1>
+				</div>
+				<p class="extract">...This online redirection script tool is easy to use, you can create cross-browser JavaScript redirections in the most effective and fully compatible way...</p>
+			</div>
+			<div class="color-line"></div>
+			<div class="black-line"></div>
+		</div>
+		
+		<div class="content">
+			<div class="left">
+				<h2>JavaScript Redirection Script</h2>
+				<p>
+					JavaScript redirect is a client side redirecting technique. This tool helps you to automatically create <strong>redirect scripts</strong> momentaneously. 
+					You can also add time delay before the redirection, or you can just set it to zero, and create an immediate redirection. If you can't access 
+					the server's .htaccess file, or have no PHP code to work with, this tool will be your best friend to manage redirections on your websites. 
+					Here are some situations, when you'll be in need of <strong>JavaScript redirection</strong>:
+				</p>
+				<ul>
+					<li>redirect blogger and blogspot</li>
+					<li>redirect wordpress</li>
+					<li>redirect tumblr</li>
+					<li>redirect html website</li>
+				</ul>
+				<p>
+					The <strong>redirect script</strong> uses the <i>window.location.replace(url)</i> instead of the <i>window.location.href = url</i>
+					to prevent the browser to push the redirector site to the history, so the users are able to hit the back button, without creating redirect loops. The script also contains
+					an <strong>html redirect</strong> code line only for JavaScript disabled browsers. It also has a built-in IE hack to pass the http referer. 
+					A <i>link rel="canonical"</i> line is added to the script, so search engines will display your destination site instead of the redirector.
+				</p>
+			</div>
+			
+			<div class="right">
+				<div>
+					<!--<h2>Related Tools</h2>
+					<ul>
+						<li><a href="#" title="">Tool 1</a></li>
+						<li><a href="#" title="">Tool 2</a></li>
+						<li><a href="#" title="">Tool 3</a></li>
+						<li><a href="#" title="">Tool 4</a></li>
+						<li><a href="#" title="">Tool 5</a></li>
+					</ul>
+					<h2>Useful Links</h2>
+					<ul>
+						<li><a href="#" title="">Link 1</a></li>
+						<li><a href="#" title="">Link 2</a></li>
+						<li><a href="#" title="">Link 3</a></li>
+						<li><a href="#" title="">Link 4</a></li>
+					</ul>-->
+				</div>
+			</div>
+			
+			<div class="tool">
+				<form name="javascript redirect generator form" id="myform">
+					Delay in seconds:&nbsp;&nbsp;&nbsp;<input type="text" name="delay" id="delay" value="0"/>&nbsp;&nbsp;&nbsp;&nbsp;URL:&nbsp;&nbsp;&nbsp;<input type="text" name="url" id="url" value="https://google.com"/><br/>
+					<button type="button" id="button" onclick="GenerateRedirect()">Generate the redirect code for me</button><br/>
+					<font class="pleaseshare">Please share this tool to support my work!</font>
+						<span class="share">
+							<span class='st_facebook_large' displayText='Facebook'></span>
+							<span class='st_twitter_large' displayText='Tweet'></span>
+							<span class='st_googleplus_large' displayText='Google +'></span>
+							<span class='st_reddit_large' displayText='Reddit'></span>
+							<span class='st_tumblr_large' displayText='Tumblr'></span>
+							<span class='st_pinterest_large' displayText='Pinterest'></span>
+							<span class='st_delicious_large' displayText='Delicious'></span>
+							<span class='st_digg_large' displayText='Digg'></span>
+							<span class='st_stumbleupon_large' displayText='StumbleUpon'></span>
+							<span class='st_linkedin_large' displayText='LinkedIn'></span>
+							<span class='st_blogger_large' displayText='Blogger'></span>
+							<span class='st_technorati_large' displayText='Technorati'></span>
+							<span class='st_sharethis_large' displayText='ShareThis'></span>
+						</span>
+					<textarea id="output" onclick="this.select()" readonly>
+Output code will be here...</textarea>
+					<textarea id="delaycode">
+<!--Pleace this snippet right after opening the head tag to make it work properly-->
+<!--REDIRECTING STARTS-->
+<link rel="canonical" href="REDIRECTTO"/>
+<noscript>
+<meta http-equiv="refresh" content="LATENCY;URL=REDIRECTTO">
+</noscript>
+<script type="text/javascript">
+var url = "REDIRECTTO";
+var delay = "LATENCY000";
+
+window.onload = function ()
+{
+	DoTheRedirect()
+}
+function DoTheRedirect()
+{
+	setTimeout(GoToURL, delay)
+}
+function GoToURL()
+{
+	// IE8 and lower fix
+	if (navigator.userAgent.match(/MSIE\s(?!9.0)/))
+	{
+		var referLink = document.createElement("a");
+		referLink.href = url;
+		document.body.appendChild(referLink);
+		referLink.click();
+	}
+
+	// All other browsers
+	else { window.location.replace(url); }
+}
+</script>
+<!--REDIRECTING ENDS--></textarea>
+					<textarea id="nodelaycode">
+<!--Pleace this snippet right after opening the head tag to make it work properly-->
+<!--REDIRECTING STARTS-->
+<link rel="canonical" href="REDIRECTTO"/>
+<noscript>
+<meta http-equiv="refresh" content="LATENCY;URL=REDIRECTTO">
+</noscript>
+<script type="text/javascript">
+	var url = "REDIRECTTO";
+	
+	// IE8 and lower fix
+	if (navigator.userAgent.match(/MSIE\s(?!9.0)/))
+	{
+		var referLink = document.createElement("a");
+		referLink.href = url;
+		document.body.appendChild(referLink);
+		referLink.click();
+	}
+	
+	// All other browsers
+	else { window.location.replace(url); }
+</script>
+<!--REDIRECTING ENDS--></textarea>
+				</form>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40446243-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>

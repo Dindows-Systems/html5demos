@@ -1,0 +1,56 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A Bar chart with post processing</title>
+</head>
+<body>
+        
+    <h1>A Bar chart with post processing</h1>
+    
+    <p>
+        This Bar chart uses the custom RGraph ondraw event to add highlight to each bar.
+    </p>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            var bar7 = new RGraph.Bar('cvs', [[47,75],[32,74],[71,85],[25,19],[23,71],[81,59],[43,130],[23,20]]);
+            bar7.Set('chart.colors', ['#494949','#35A0DA']);
+            bar7.Set('chart.labels', ['Alf','Bert','Craig','Dan','Edgar','Fred','Gary','Harry']);
+            bar7.Set('chart.ylabels.count', 3);
+            bar7.Set('chart.numyticks', 5);
+            bar7.Set('chart.background.grid.vlines', false);
+            bar7.Set('chart.background.grid.border', false);
+            
+            // New, more compact, "DOM1-esque", style of adding events
+            bar7.ondraw = function (obj)
+            {
+                var len = obj.coords.length;
+                
+                obj.context.beginPath();
+                    obj.context.fillStyle = 'rgba(255,255,255,0.15)';
+                    for (var i=0; i<len; ++i) {
+                        obj.context.fillRect(obj.coords[i][0], obj.coords[i][1], obj.coords[i][2] / 2, obj.coords[i][3])
+                    }
+                obj.context.fill();
+            }
+            
+            bar7.Draw();
+        }
+    </script>
+
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

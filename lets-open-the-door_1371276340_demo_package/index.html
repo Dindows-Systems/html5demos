@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+	
+	<!-- The code of this file and its assets are copyright by Deepak Kamat (www.stramaxon.com) 
+	     Reproduction of this code without the owners permission is prohibited. 
+		 
+		 This project is just for example/educational purpose.
+
+
+        Some Illustrative IMAGES and the Door Open/Close Audio effect are copyright by Rovio Inc. 		 
+	-->
+	
+	<!-- Aah, wanna know what code this app uses? It's free for you! -->
+        <meta charset="UTF-8" />
+        <title>Let's open the door</title>
+        <link rel='stylesheet' media='all' href='css/CstylesS.css'/>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		
+		<style type='text/css'>
+		/* Internal Style */
+		
+		.control-buttons {position:fixed;top:2px;right:2px;}
+		
+		
+		</style>
+		
+		<script type='text/javascript'>
+		$(document).ready(function(){ // Document Starts
+		
+		var aDss = document.getElementById('audioDOOReff');
+		var doorFC = $('.door');
+		
+		
+		// Close Door 
+		$('#openDoorGT').on('click',function(){
+		
+		if (doorFC.hasClass('closed') != true) { // Don't run if class is already there 
+		
+		$('.door').addClass('closed');
+		
+		soundDRstop(); // stop the sound
+		soundDR(); //sound effect
+		
+		}
+		});
+		
+		// Open Door 
+		$('#closeDoorGT').on('click',function(){
+		
+		if (doorFC.hasClass('closed') == true ) {
+		
+		doorFC.removeClass('closed');
+		
+		soundDRstop(); // stop the sound
+		soundDR(); // sound effect
+		}
+		});
+		
+		
+		function soundDR() {
+		aDss.src='audio/sd3.mp3';
+		aDss.play();
+		}
+		
+		function soundDRstop() {
+		aDss.src='';
+		}
+       
+		});
+		</script>
+		
+		
+		<script type='text/javascript'>
+		$(document).ready(function(){ // Document Starts
+		//Styling Purpose
+		
+		//My FACE SHOW
+		$('.myintro .intro-inR ').on('mouseover',function() {
+		$('.g67fpicContainer').fadeIn('200');
+		});
+		
+		//Show my NAME
+		$('.g67fpicContainer img').on('mouseover',function() {
+		$('.ghTname466').slideDown('200');
+		});
+		
+		});
+		</script>
+
+    </head>
+    <body>
+	
+	<audio style='display:none;' id='audioDOOReff' src=''>Sorry, your browser don't support the <code>audio</code> element</audio>
+	
+	<div class='control-buttons' style='z-index:15;'>
+	<button id='closeDoorGT'>Close Door</button>
+	<button id='openDoorGT'>Open Door</button>
+	</div>
+	
+	
+	<div class='doorBox'>
+	<div class='door1 door '></div>
+	<div class='door2 door '></div>
+	
+	<div class='animated-pic planet1 planet-pic'><img src='img/planet1.png'/></div> 
+	
+	<div class='myintro'>
+	
+	<div class='intro-inR'>
+	<h2 class='hGT5736'>Thanks for trying this :)</h2>
+	<h4 class='ghY67HN'>Taking Web Languages to the next level</h4>
+	
+	<div class='g67fpicContainer' style='display:none;'>
+	<img class='pic356ffhg' src='img/newpic-me.jpg'/>
+	<div class='ghTname466' style='display:none;'>
+	Deepak Kamat
+	<span style='display:block;text-align:center;margin:5px 0px;'><div style='background-color:#fff;width:6px;height:6px;border-radius:50%;margin:0 auto;'></div></span>
+	depy45631@gmail.com - www.stramaxon.com
+	
+	</div>
+	</div>
+	
+	</div>
+	
+	</div>
+	
+	</div>
+	
+	
+	</body>
+</html>

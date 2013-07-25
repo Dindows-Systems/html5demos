@@ -1,0 +1,298 @@
+
+<!-- saved from url=(0031)http://htmltagstripper.com/svg/ -->
+<html><meta style="visibility: hidden !important; display: block !important; width: 0px !important; height: 0px !important; border-style: none !important;"><embed id="__IDM__" type="application/x-idm-downloader" width="1" height="1" style="visibility: hidden !important; display: block !important; width: 1px !important; height: 1px !important; border-style: none !important; position: absolute !important; top: 0px !important; left: 0px !important;"></meta><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><script async="" src="./svg_files/analytics.js"></script><script src="./svg_files/jquery-2.0.0.min.js" type="text/javascript"></script>
+	<meta name="google-site-verification" content="7m2ehFY9E4jnL-R0v8bQqZQZujxNGnJ4wOowkRiQow0">
+	<meta name="Author" content="Hardik Sondagar">
+	<meta name="Description" content="SVG Circle and Arc with Percentage">
+<meta name="KeyWords" content="html, strip, strips, svg, arc, html5, css3, percentage, graphics">
+<style>
+#clock
+{
+	position:relative;
+	max-width:600px;
+	
+}
+.svgcircle
+{
+	position:relative;
+	transform:rotateX(45deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	width:165px;
+	height:115px;
+	float:right;
+}
+
+.percentage
+{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+	-o-transform:rotate(-90deg);
+	-ms-transform:rotate(-90deg);
+	
+	margin-left: 50px;
+	margin-bottom: -90px;
+	font-family: 'Calibri';
+	font-size: 36pt;
+	text-align: center;
+	color:white;
+	font-weight: 900;
+	text-shadow:0 1px 4px rgba(0,0,0,0.7);
+		text-shadow: 0 1px 0 #ccc, 
+				0 2px 0 #c9c9c9,
+				0 3px 0 #bbb,
+				0 4px 0 #b9b9b9,
+				0 3px 0 #aaa,
+				0 4px 1px rgba(0,0,0,.1),
+				0 0 5px rgba(0,0,0,.1),
+				0 1px 3px rgba(0,0,0,.3),
+				0 3px 5px rgba(0,0,0,.2),
+				0 5px 10px rgba(0,0,0,2.25),
+				0 20px 20px rgba(0,0,0,.15);
+	
+}
+
+
+</style>
+
+</head><body style=""><div id="clock">
+<div id="svgcircles" class="svgcircle">
+
+<p id="percentages" class="percentage">2</p>	
+<svg id="svg_tests" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="110" cy="60" r="50" fill="none" stroke="#e4e4e4" stroke-width="2"></circle>
+<path id="svgpaths" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0.4);" fill="none" stroke="#16a6b6" d="m60,60 A50,50 0 0,161.092619963309716,49.60441545911203" stroke-width="2"></path>
+
+</svg>
+</div>
+
+<div id="svgcirclem" class="svgcircle">
+
+<p id="percentagem" class="percentage">26</p>	
+<svg id="svg_testm" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="110" cy="60" r="50" fill="none" stroke="#e4e4e4" stroke-width="2"></circle>
+<path id="svgpathm" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#16a6b6" d="m60,60 A50,50 0 0,1155.67727288213004,39.66316784620998" stroke-width="2"></path>
+
+</svg>
+</div>
+
+<div id="svgcircleh" class="svgcircle">
+
+<p id="percentageh" class="percentage">13</p>	
+<svg id="svg_testh" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<circle style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" cx="110" cy="60" r="50" fill="none" stroke="#e4e4e4" stroke-width="2"></circle>
+<path id="svgpathh" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);" fill="none" stroke="#16a6b6" d="m60,60 A50,50 0 0,199.60441545911203,11.092619963309723" stroke-width="2"></path>
+
+</svg>
+</div>
+
+
+</div>
+<script>
+
+	
+	var svgm=document.getElementById('svgpathm');
+	
+	var current_d="m60,60 A50,50 0 1,1";
+	var current_dx="m60,60 A50,50 0 0,1";
+	
+	
+	var offset=5.50;
+	var now = new Date();
+	var hour = 60*60*1000;
+	var min = 60*1000;
+	
+	
+	var time=new Date(now.getTime() + (now.getTimezoneOffset() * min) + (offset * hour));
+	var last_second=time.getSeconds();
+	var timex;
+	draw_circle(time.getMinutes(),"m");	
+	draw_circle(time.getHours(),"h");	
+	
+	
+
+  setInterval(function()
+  {
+	//svg.setAttribute('d',current_dx+60+","+60);
+	//draw_circle(0);
+	var seconds;
+	var nowx = new Date();
+	
+	window.timex=new Date(nowx.getTime() + (nowx.getTimezoneOffset() * window.min) + (window.offset * window.hour));
+	seconds=timex.getSeconds();
+	if(seconds==0)
+	{
+			draw_circle(timex.getMinutes(),"m");
+			if(timex.getMinutes()==0)
+			{
+				draw_circle(timex.getHours(),"h");
+			
+			}
+	}
+	
+	if(seconds!=last_second)
+	{
+		draw_circle(seconds,"s");
+	}
+	else
+	{
+		console.log(seconds+","+last_second);	
+	}
+	
+	last_second=seconds;
+	
+	
+	
+	//draw_circle(60);	
+  },300);
+
+
+	//	var svg=document.getElementById('svgpath');
+  	//	svg.setAttribute('d',current_dx+160+","+60);
+	
+
+
+
+
+
+
+
+	
+
+
+	
+	function draw_circle(percentage,digit)
+	{
+		if(digit=="s")
+		{
+			var svg=document.getElementById('svgpaths');
+			$('#percentage'+digit).html(timex.getSeconds());
+		}
+		else if(digit=="m")
+		{
+				var svg=document.getElementById('svgpathm');
+				$('#percentage'+digit).html(percentage);
+		}
+		else if(digit=="h")
+		{
+				var svg=document.getElementById('svgpathh');
+				$('#percentage'+digit).html(percentage);
+		
+		}
+		var endx=0;
+		var endy=0;
+		var flag=0;
+		//console.log(percentage);
+		if(percentage>=30)
+			{
+				flag=1;
+				
+				per=((percentage-30)*180/30);
+			//$('#percentage').html(Math.ceil((50+(percentage-50)*(pos-0.5)*2)*0.6));
+			endx=110+50*Math.cos(0+(Math.PI/180)*per);
+			endy=60+50*Math.sin(0+(Math.PI/180)*per);
+			svg.setAttribute('d',current_d+endx+","+endy);
+
+			}
+		else
+			{
+				flag=0;
+				if(percentage>=50)
+				{
+					per=180;
+				
+				}
+				else
+				{
+					per=(percentage*180/30);
+				
+				}
+
+				
+				endx=110-50*Math.cos(0+(Math.PI/180)*per);
+				endy=60-50*Math.sin(0+(Math.PI/180)*per);
+				svg.setAttribute('d',current_dx+endx+","+endy);
+			}
+		
+		
+ 
+		
+		
+	
+		
+		
+        
+    
+
+	
+ 
+  
+	}
+	
+	
+	
+	function draw_minute(percentage)
+	{
+	
+	var endx=0;
+	var endy=0;
+	var flag=0;
+		//console.log(percentage);
+		if(percentage>=30)
+			{
+				flag=1;
+				
+				per=((percentage-30)*180/30);
+			//$('#percentage').html(Math.ceil((50+(percentage-50)*(pos-0.5)*2)*0.6));
+			endx=110+50*Math.cos(0+(Math.PI/180)*per);
+			endy=60+50*Math.sin(0+(Math.PI/180)*per);
+			svgm.setAttribute('d',current_d+endx+","+endy);
+
+			}
+		else
+			{
+				flag=0;
+				if(percentage>=50)
+				{
+					per=180;
+				
+				}
+				else
+				{
+					per=(percentage*180/30);
+				
+				}
+
+				
+				endx=110-50*Math.cos(0+(Math.PI/180)*per);
+				endy=60-50*Math.sin(0+(Math.PI/180)*per);
+				svgm.setAttribute('d',current_dx+endx+","+endy);
+			}
+		$('#percentagem').html(percentage);
+	
+ 
+  
+	}
+  
+
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40737319-1', 'htmltagstripper.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+<!-- Hosting24 Analytics Code -->
+
+<!-- End Of Analytics Code -->
+<div id="sbi_camera_button" class="sbi_search" style="left:0px;top:0px;position:absolute;width:29px;height:27px;border:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;z-index:2147483647;display:none;"></div></body></html>

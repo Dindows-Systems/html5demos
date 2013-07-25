@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DesignShack Sexy Magazine-Style Dropdown Menu</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+
+<body>
+<div id="head">
+	<div class="wrap">
+		<h1><img src="images/logo.jpg" alt="Blog Magazine Logo" /></h1>
+	</div>
+</div>
+
+<div class="wrap">
+	<ul id="nav">
+		<li><a href="#">Homepage</a></li>
+		<li><a href="#">About the Mag</a>
+			<ul>
+				<li><a href="#">Company</a></li>
+				<li><a href="#">Authors</a></li>
+				<li><a href="#">Write for Us?</a></li>
+				<li><a href="#">Advertising</a></li>
+				<li><a href="#">Get in Touch</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Freebies</a>
+			<ul>
+				<li><a href="#">PSD</a></li>
+				<li><a href="#">AI Vectors</a></li>
+				<li><a href="#">Patterns</a></li>
+				<li><a href="#">Icons</a></li>
+			</ul>			
+		</li>
+		<li><a href="#">Tutorials</a>
+			<ul>
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS3</a></li>
+				<li><a href="#">jQuery</a></li>
+				<li><a href="#">PHP MySQL</a></li>
+				<li><a href="#">Ruby on Rails</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Web Tools</a>
+			<ul>
+				<li><a href="#">Performance</a></li>
+				<li><a href="#">Browser Testing</a></li>
+				<li><a href="#">CMS Plugins</a></li>
+				<li><a href="#">Cheat Sheets</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Originals</a>
+			<ul>
+				<li><a href="#">Website Design</a></li>
+				<li><a href="#">Mobile</a></li>
+				<li><a href="#">User Interface</a></li>
+				<li><a href="#">Freelancing</a></li>
+				<li><a href="#">Inspiration</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {	
+	$('#nav li').hover(function() {
+		$('ul', this).slideDown(200);
+		$(this).children('a:first').addClass("hov");
+	}, function() {
+		$('ul', this).slideUp(100);
+		$(this).children('a:first').removeClass("hov");		
+	});
+});
+</script>
+</body>
+</html>

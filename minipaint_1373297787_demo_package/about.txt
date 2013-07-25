@@ -1,0 +1,20 @@
+miniPaint
+
+Online graphics editing tool using HTML5.
+
+Online graphics editing tool use HTML5 technologies like Canvas, Offline support,
+Drag and Drop.
+
+Features: open, edit, save images, various drawing tools like Magic Wand tool, 
+erase, fill, colour picker, colour selector, layers, pencil, brush, shapes, trim, flip, 
+rotate, resize, Lanczos resample, transparency, zoom, grid, 22 various effects. Most modern browsers 
+include paste from clipboard.
+
+Key features: layers, transparency, offline graphics editing.
+
+It works in all modern browsers including Firefox, Chrome, Opera, Safari and IE 9/10. 
+
+Used libraries:
+JQuery
+Menu http://blog.geotitles.com/2011/09/creating-the-new-top-black-bar-found-in-google-and-all-its-products/
+ImageFilters.js https://github.com/arahaya/ImageFilters.js

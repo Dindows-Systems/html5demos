@@ -1,0 +1,39 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script src="../libraries/RGraph.common.core.js" ></script>
+    <script src="../libraries/RGraph.common.key.js" ></script>
+    <script src="../libraries/RGraph.pie.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>Content of a pop song</title>
+</head>
+<body>
+
+    <h1>Content of a pop song</h1>
+
+    <canvas id="cvs" width="400" height="300">[No canvas support]</canvas>
+    
+    <script>
+        window.onload = function ()
+        {
+            var pie = new RGraph.Pie('cvs', [30,30,39,1]);
+            pie.Set('chart.key', ['Yeah','Ooh', 'Baby', 'Actual lyrics']);
+            pie.Set('chart.key.position', 'gutter');
+            pie.Set('chart.key.position.gutter.boxed', false);
+            pie.Set('chart.strokestyle', 'transparent');
+            pie.Set('chart.exploded', 8);
+            pie.Set('chart.shadow', true);
+            pie.Set('chart.gutter.top', 45);
+            pie.Draw();
+        }
+    </script>
+
+    <p>        
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

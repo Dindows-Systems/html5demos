@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Digg - All News, Videos, &amp; Images</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css" media="all" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="favicon.ico" type="image/x-icon" />
+	<script type="text/javascript" language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="w">
+		<!-- @begin header -->
+		<header>
+			<h1><a href="#">digg</a></h1>
+			
+			<a href="#" class="head-linking">Join Digg</a>
+			<a href="#" class="head-linking side-brdr">About</a>
+			<a href="#" class="head-linking side-brdr">Login</a>
+			
+			<div class="side-header">
+				<form action="#" method="get" id="search">
+					<input type="text" name="s" id="keywords" placeholder="Search Digg..." />
+					<input type="image" id="top-submit" src="img/search.gif" alt="Search" />
+				</form>
+			</div>
+			
+			<div id="topnav">
+				<ul id="topmainnav">
+					<li>
+						<a href="#">Technology <em id="drop101"> more</em></a>
+						<ul class="catdrop" id="catdrop101" style="display:none;">
+							<li><a href="#">Apple</a></li>
+							<li><a href="#">Design</a></li>
+							<li><a href="#">Gadgets</a></li>
+							<li><a href="#">Hardware</a></li>
+							<li><a href="#">Industry News</a></li>
+							<li><a href="#">Linux/Unix</a></li>
+							<li><a href="#">Microsoft</a></li>
+							<li><a href="#">Mods</a></li>
+							<li><a href="#">Programming</a></li>
+							<li><a href="#">Security</a></li>
+							<li><a href="#">Software</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">World &amp; Business <em id="drop102"> more</em></a>
+						<ul class="catdrop" id="catdrop102" style="display:none;">
+							<li><a href="#">Business &amp; Finance</a></li>
+							<li><a href="#">World News</a></li>
+							<li><a href="#">Politics</a></li>
+							<li><a href="#">Market Trading</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Science <em id="drop103"> more</em></a>
+						<ul class="catdrop" id="catdrop103" style="display:none;">
+							<li><a href="#">Environment</a></li>
+							<li><a href="#">General Sciences</a></li>
+							<li><a href="#">Space</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Gaming <em id="drop104"> more</em></a>
+						<ul class="catdrop" id="catdrop104" style="display:none;">
+							<li><a href="#">Industry News</a></li>
+							<li><a href="#">PC Games</a></li>
+							<li><a href="#">Playable Web Games</a></li>
+							<li><a href="#">Nintendo</a></li>
+							<li><a href="#">PlayStation</a></li>
+							<li><a href="#">Xbox</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Lifestyle <em id="drop105"> more</em></a>
+						<ul class="catdrop" id="catdrop105" style="display:none;">
+							<li><a href="#">Arts &amp; Culture</a></li>
+							<li><a href="#">Autos</a></li>
+							<li><a href="#">Educational</a></li>
+							<li><a href="#">Food &amp; Drink</a></li>
+							<li><a href="#">Health</a></li>
+							<li><a href="#">Travel &amp; Places</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Entertainment <em id="drop106"> more</em></a>
+						<ul class="catdrop" id="catdrop106" style="display:none;">
+							<li><a href="#">Celebrity</a></li>
+							<li><a href="#">Movies</a></li>
+							<li><a href="#">Music</a></li>
+							<li><a href="#">Television</a></li>
+							<li><a href="#">Comics &amp; Animation</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Sports <em id="drop107"> more</em></a>
+						<ul class="catdrop" id="catdrop107" style="display:none;">
+							<li><a href="#">Baseball</a></li>
+							<li><a href="#">Basketball</a></li>
+							<li><a href="#">Extreme</a></li>
+							<li><a href="#">Football - US/Canada</a></li>
+							<li><a href="#">Golf</a></li>
+							<li><a href="#">Hockey</a></li>
+							<li><a href="#">Motorsport</a></li>
+							<li><a href="#">Olympics</a></li>
+							<li><a href="#">Soccer</a></li>
+							<li><a href="#">Tennis</a></li>
+							<li><a href="#">Other Sports</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Offbeat <em id="drop108"> more</em></a>
+						<ul class="catdrop" id="catdrop108" style="display:none;">
+							<li><a href="#">Comedy</a></li>
+							<li><a href="#">Odd Stuff</a></li>
+							<li><a href="#">People</a></li>
+							<li><a href="#">Pets &amp; Animals</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="topsubnav">
+				<nav>
+					<a href="#" class="current" id="popped">Popular</a>
+					<a href="#" id="upcoming">Upcoming</a>
+				</nav>
+				
+				<ul class="media">
+					<li><a href="#">News</a></li>
+					<li><a href="#">Videos</a></li>
+					<li><a href="#">Images</a></li>
+					<li class="xtra"><a href="#" class="customize">Customize</a></li>
+				</ul>
+			</div>
+		</header>
+		<!-- @end top header -->
+		
+		<!-- @begin main content -->
+		<div id="content" class="clearfix">
+			<section id="sidebar">
+				<div id="sidebar-ad">
+					<a href="#"><img src="img/mc-ad-300x250.png" border="0" /></a>
+				</div>
+				
+				<div class="side-container">
+					<ul class="side-opts">
+						<li><a href="#">all</li>
+						<li><a href="#">news</a></li>
+						<li><a href="#">videos</a></li>
+						<li><a href="#">images</a></li>
+					</ul>
+					<h2>Top in All Topics</h2>
+					<div id="topten" class="clearfix">
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">Get Up, Stand Up: Ammiano Introduces Marijuana Legalization <img src="img/t/topten-001.jpg" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>3802</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">Dad ruins trick <img src="img/t/topten-002.jpg" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>3353</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3><a href="#">Apple Announces Safari 4 - The World's Fastest Browser</a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>2353</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">The Las Vegas Strip in 1954 [PIC] <img src="img/imgr.gif" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>2101</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3><a href="#">Study Shows Most Corporations Pay No U.S. Income Taxes</a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>1899</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">Scientists Discover Gene that can Grow Teeth! <img src="img/t/topten-006.jpg" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>1658</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">New Evidence Proves Digg Is Older Than The Internet!! (pic) <img src="img/t/topten-007.jpg" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>1150</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">Now this is what I call a CollegeHumor Original <img src="img/vids.gif" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>955</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3 class="wthumb"><a href="#">Saddest picture you'll see today <img src="img/imgr.gif" /></a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>807</strong></a>
+							</div>
+						</div>
+						
+						<div class="summary clearfix">
+							<h3><a href="#">Amazon.com: The Fraying of a Nation's Decency</a></h3>
+							<div class="digg-count-sm">
+								<a href="#"><strong>776</strong></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="side-container">
+					<h2>Recommendation Engine <img src="img/beta.gif" alt="beta" /></h2>
+					<img src="img/digg-engine-widget.png" alt="Recommendation Engine for Digg v3" class="imgfloater" />
+					<p>By matching you with Diggers like you, the Recommendation Engine helps you Digg up the next big thing!</p>
+					<p><a href="#">Log in</a> or <a href="#">register</a> to get started!</p>
+				</div>
+				
+				<div class="side-container">
+					<h2>Got Digg Swag?</h2>
+					<img src="img/digg-promo-store.png" alt="got Digg swag? the Digg store!" class="imgfloater" />
+					<p>We've given our Digg shop a facelift and added cool new items for you to show your Digg pride. Stock up on Digg gear at the <a href="#">Digg shop</a>.</p>
+				</div>
+			</section>
+			
+			<section id="main">
+				<div class="selector">
+					<h2>News, Images, Videos</h2>
+					<span class="time-filter">
+					<a href="">365 Days</a>
+					<a href="#">30 Days</a>
+					<a href="#">7 Days</a>
+					<a href="#">Top in 24 Hr</a>
+					<a href="#" class="tooling">Most Recent</a>
+					</span>
+				</div>
+				
+				<!-- @begin news story -->
+				<article class="news-itm" id="fp0">
+					<a href="#" class="thumb"><img src="img/t/bball-001.jpg" /></a>
+					<div class="news-body">
+						<h3><a href="#">The 4 Best All-Time Players From Each NBA Franchise</a></h3>
+						<p><em class="source">sports.espn.go.com -</em> Trying to find four people to represent an NBA franchise's history is tough. Probably harder than finding four decent presidents that represent what a country stands for... <a href="#" class="more">More</a> <em class="topic">(<a href="#">Basketball</a>)</em></p>
+						<div class="details">
+							<a href="#" class="story-comment">6 Comments</a>
+							<a href="#" class="story-share">Share</a>
+							<a href="#" class="story-bury">Bury</a>
+							<span class="user-details">
+								<a href="#"><img src="img/usr/diggleague.png" alt="diggleague" class="user-ava" />diggleague</a> made popular <em class="d">3 min ago</em>
+							</span>
+						</div>
+					</div>
+					
+					<ul class="digg-badge">
+						<li class="counter"><a href="#"><strong>59</strong> diggs</a></li>
+						<li class="voter"><a href="#">digg it</a></li>
+					</ul>
+				</article>
+				<!-- @end story -->
+				
+				<!-- @begin news story -->
+				<article class="news-itm" id="fp1">
+					<div class="news-body">
+						<h3><a href="#">Einstein's 23 Biggest Mistakes</a></h3>
+						<p><em class="source">discovermagazine.com -</em> The man with the big ideas wasn't so good with the details. Albert often let his intuition overrule flawed proofs and shaky math. Maybe you'll feel a little better about your own flubs. <a href="#" class="more">More</a> <em class="topic">(<a href="#">General Sciences</a>)</em></p>
+						<div class="details">
+							<a href="#" class="story-comment">12 Comments</a>
+							<a href="#" class="story-share">Share</a>
+							<a href="#" class="story-bury">Bury</a>
+							<span class="user-details">
+								<a href="#"><img src="img/usr/mrbabyman.png" alt="MrBabyMan" class="user-ava" />MrBabyMan</a> made popular <em class="d">15 min ago</em>
+							</span>
+						</div>
+					</div>
+					
+					<ul class="digg-badge">
+						<li class="counter"><a href="#"><strong>121</strong> diggs</a></li>
+						<li class="voter"><a href="#">digg it</a></li>
+					</ul>
+				</article>
+				<!-- @end story -->
+				
+				<!-- @begin news story -->
+				<article class="news-itm" id="fp2">
+					<div class="news-body">
+						<h3><a href="#">Incredible Movie Made From Just a Normal Still Camera</a></h3>
+						<p><em class="source">patrykrebisz.com -</em> These guys just had way too much time one their hands. <a href="#" class="more">More</a> <em class="topic">(<a href="#">Movies</a>)</em></p>
+						<div class="details">
+							<a href="#" class="story-comment">10 Comments</a>
+							<a href="#" class="story-share">Share</a>
+							<a href="#" class="story-bury">Bury</a>
+							<span class="user-details">
+								<a href="#"><img src="img/usr/zaibatsu.png" alt="zaibatsu" class="user-ava" />zaibatsu</a> made popular <em class="d">45 min ago</em>
+							</span>
+						</div>
+					</div>
+					
+					<ul class="digg-badge">
+						<li class="counter"><a href="#"><strong>199</strong> diggs</a></li>
+						<li class="voter"><a href="#">digg it</a></li>
+					</ul>
+				</article>
+				<!-- @end story -->
+				
+				<!-- @begin news story -->
+				<article class="news-itm" id="fp3">
+					<a href="#" class="thumb"><img src="img/t/barackbook-001.jpg" /></a>
+					<div class="news-body">
+						<h3><a href="#">Barackbook: McCain Continues To Struggle With the Internet</a></h3>
+						<p><em class="source">huffingtonpost.com -</em> In an attempt to appear internet savvy, the Republican National Committee has launched "BarackBook," a terrible parody of Facebook that some dweeb in the McCain campaign probably thinks is just the bee's knees in political humor. I really can only encourage people to go and gawk at this scintillatingly dumb idea. <a href="#" class="more">More</a> <em class="topic">(<a href="#">Politics</a>)</em></p>
+						<div class="details">
+							<a href="#" class="story-comment">31 Comments</a>
+							<a href="#" class="story-share">Share</a>
+							<a href="#" class="story-bury">Bury</a>
+							<span class="user-details">
+								<a href="#"><img src="img/usr/makimaki.png" alt="MakiMaki" class="user-ava" />MakiMaki</a> made popular <em class="d">1hr 34 min ago</em>
+							</span>
+						</div>
+					</div>
+					
+					<ul class="digg-badge">
+						<li class="counter"><a href="#"><strong>278</strong> diggs</a></li>
+						<li class="voter"><a href="#">digg it</a></li>
+					</ul>
+				</article>
+				<!-- @end story -->
+				
+				<!-- @begin news story -->
+				<article class="news-itm" id="fp4">
+					<a href="#" class="thumb"><img src="img/t/oregon-wind-farm-001.jpg" /></a>
+					<div class="news-body">
+						<h3><a href="#">World’s Largest Wind Farm Planned In Oregon</a></h3>
+						<p><em class="source">cleantechnica.com -</em> The Portland Business Journal reports that Oregon has just been given the go-ahead by The Oregon Energy Facility Siting Council to build a 909 MW wind farm in the north-central part of the state. That's enough energy to power 200,000 homes. <a href="#" class="more">More</a> <em class="topic">(<a href="#">Environment</a>)</em></p>
+						<div class="details">
+							<a href="#" class="story-comment">19 Comments</a>
+							<a href="#" class="story-share">Share</a>
+							<a href="#" class="story-bury">Bury</a>
+							<span class="user-details">
+								<a href="#"><img src="img/usr/mrbabyman.png" alt="MrBabyMan" class="user-ava" />MrBabyMan</a> made popular <em class="d">1hr 58 min ago</em>
+							</span>
+						</div>
+					</div>
+					
+					<ul class="digg-badge">
+						<li class="counter"><a href="#"><strong>411</strong> diggs</a></li>
+						<li class="voter"><a href="#">digg it</a></li>
+					</ul>
+				</article>
+				<!-- @end story -->
+				
+				<ul id="paginator">
+					<li class="prev">&laquo; Previous</li>
+					<li class="current">1</li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">6</a></li>
+					<li><a href="#">7</a></li>
+					<li><a href="#">8</a></li>
+					<li><a href="#">9</a></li>
+					<li class="sep"><span>...</span></li>
+					<li><a href="#">245</a></li>
+					<li><a href="#">246</a></li>
+					<li class="next"><a href="#">Next &raquo;</a></li>
+				</div>
+			</section>
+		</div>
+		<!-- @end main content -->
+		
+		<!-- @begin footer -->
+		<footer>
+			<div id="footer-contents" class="clearfix">
+				<dl class="col">
+					<dt>Site Links</dt>
+					<dd><a href="#">Home</a></dd>
+					<dd><a href="#">Search Digg</a></dd>
+					<dd><a href="#">RSS Feeds</a></dd>
+					<dd><a href="#">Popular Archive</a></dd>
+					<dd><a href="#">Terms of Use</a>, <a href="#">Privacy</a></dd>
+					<dd><a href="#">Report a Website Bug</a></dd>
+				</dl>
+				
+				<dl class="col">
+					<dt>All About Digg</dt>
+					<dd><a href="#">About Us</a> &amp; <a href="#">Contact</a></dd>
+					<dd><a href="#">Take a Tour</a></dd>
+					<dd><a href="#">How Digg Works</a></dd>
+					<dd><a href="#">Frequent Questions</a></dd>
+					<dd><a href="#">The Digg Blog</a></dd>
+					<dd><a href="#">Jobs at Digg</a></dd>
+					<dd><a href="#">Diggnation Podcast</a></dd>
+				</dl>
+				
+				<dl class="col">
+					<dt>Digg Tools &amp; API</dt>
+					<dd>Check out <a href="#">Digg Tools</a> that let you integrate Digg into your site and add Google features.</dd>
+					<dd>Develop your own tools with the <a href="#">Digg API</a>.</dd>
+					<dd><span class="new">BETA</span> <a href="#">Add Digg to Google</a></dd>
+				</dl>
+				
+				<dl class="col">
+					<dt>Digg Store</dt>
+					<dd>Get hats, shirts, hoodies, and more at the <a href="#">Digg store</a>.</dd>
+					<dt>Advertise</dt>
+					<dd>You can buy advertising on Digg through our advertising partner <a href="#">Microsoft</a>.</dd>
+				</dl>
+				
+				<dl class="col last">
+					<dt>Digg Labs</dt>
+					<dd>Get a real-time look beneath the surface in the
+    <a href="#">digg labs</a> with our tools <a href="#">arc</a>, <a href="#">swarm</a>, <a href="#">stack</a> and  <a href="#">bigspy</a>. Also see <a href="#">Digg Spy</a>, our original real-time tracking system.</dd>
+				</dl>
+			</div>
+		</footer>
+		<!-- @end footer -->
+		
+		<div id="copyright">
+			<img src="img/little-digg.gif" /> &copy; Digg, Inc. 2006-2011 - Coded into HTML5 for <a href="http://spyrestudios.com/">SpyreStudios</a> magazine  by web designer <a href="http://twitter.com/jakerocheleau">Jake Rocheleau</a>.<br />
+			DIGG, DIGG IT, DUGG, DIGG THIS, Digg graphics, logos, designs, page headers, button icons, scripts, and other service names are the trademarks of Digg Inc.
+		</div>
+	</div>
+	
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#topmainnav em").click(function(){
+		$("#cat"+this.id).toggle();
+		
+		var thestatus = $("#cat"+this.id).css("display");
+		
+		if(thestatus == "block") {
+			$(this).closest("li").addClass("current");
+		}
+		else {
+			$(this).closest("li").removeClass("current");
+		}
+
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <link rel="stylesheet" href="demos.css" type="text/css" media="screen" />
+    
+    <script type="text/javascript" src="../libraries/RGraph.common.core.js" ></script>
+    <script type="text/javascript" src="../libraries/RGraph.bar.js" ></script>
+    <!--[if lt IE 9]><script src="../excanvas/excanvas.js"></script><![endif]-->
+    
+    <title>A Bar chart with 3D effect</title>
+</head>
+<body>
+
+    <h1>A Bar chart with a 3D effect</h1>
+
+    <canvas id="cvs" width="600" height="250">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            var bar4 = new RGraph.Bar('cvs', [[21,31],[13, 43],[42, 25],[42, 29],[59, 28],[40, 10]]);
+            bar4.Set('chart.colors', ['#2A17B1', '#98ED00']); 
+            bar4.Set('chart.labels', ['2007', '2008', '2009', '2010', '2011', '2012']);
+            bar4.Set('chart.numyticks', 5);
+            bar4.Set('chart.ylabels.count', 5);
+            bar4.Set('chart.gutter.left', 35);
+            bar4.Set('chart.variant', '3d');
+            bar4.Set('chart.strokestyle', 'transparent');
+            bar4.Set('chart.hmargin.grouped', 0);
+            bar4.Set('chart.scale.round', true);
+            bar4.Draw();
+        }
+    </script>
+
+    <p>
+        <a href="">&laquo; Back</a>
+    </p>
+
+</body>
+</html>

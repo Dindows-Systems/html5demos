@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- StackMob JavaScript / HTML5 SDK : Begin -->
+    <script type="text/javascript" src="http://static.stackmob.com/js/2.5.3-crypto-sha1-hmac.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/json2-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/underscore-1.3.3-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/backbone-0.9.2-min.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/2.5.3-crypto-sha1-hmac.js"></script>
+    <script type="text/javascript" src="http://static.stackmob.com/js/stackmob-js-0.5.2-min.js"></script>
+    <!-- StackMob JavaScript / HTML5 SDK : End -->
+
+    <!-- StackMob Initialization : Begin -->
+    <script type="text/javascript" src="/ignore/js/OLD/require/modules/init.js"></script>
+    <!-- StackMob JavaScript / HTML5 SDK : End -->
+
+    <!-- 3rd-party : Begin -->
+    <!-- 3rd-party : End -->
+
+    <!-- StackMob Helpers : Begin -->
+    <!-- StackMob Helpers : End -->
+    <script type="text/javascript">
+        //http://www.html5rocks.com/en/tutorials/file/dndfiles/
+        // Check for the various File API support.
+        if (window.File && window.FileReader && window.FileList && window.Blob) {
+            // Great success! All the File APIs are supported.
+        } else {
+            alert('The File APIs are not fully supported in this browser.');
+        }
+
+        function getStackMobBinaryString(filename, filetype, base64EncodedData) {
+            var binaryValueString = 'Content-Type: ' + filetype +
+                    '\nContent-Disposition: attachment; filename=' + filename +
+                    '\nContent-Transfer-Encoding: base64\n\n' + base64EncodedData;
+            return binaryValueString
+        }
+
+        function profile() {
+            window.location = "/temp/profile.html";
+        }
+
+        //https://gist.github.com/2505711
+        //https://www.stackmob.com/devcenter/docs/Javascript-SDK-API#a-setbinaryfile
+        function handleFileSelect(evt) {
+
+            $("#status").html("saving");
+              //console.log(evt);
+
+            file_input = $('input[type="file"]').prop('files')[0];
+            //console.log(file_input);
+            //fileName = file_input["name"];
+            //fileType = file_input["type"];
+            fileSize = file_input["size"];
+
+            if (fileSize > 10000000) return( "file too big." );
+
+            //return(1);
+
+            var _media = new media();
+            _media.create({
+                success: function(model) {
+                    //----
+                    //https://www.stackmob.com/devcenter/docs/Javascript-SDK-API#a-setbinaryfile
+                    var files = evt.target.files; // FileList object
+
+                    // Loop through the FileList
+                    for (var i = 0, f; f = files[i]; i++) {
+
+                        var reader = new FileReader();
+
+                        // Closure to capture the file information
+                        reader.onload = (function(theFile) {
+                            return function(e) {
+
+                                /*
+                                 e.target.result will return "data:image/jpeg;base64,[base64 encoded data]...".
+                                 We only want the "[base64 encoded data] portion, so strip out the first part
+                                 */
+                                var base64Content = e.target.result.substring(e.target.result.indexOf(',') + 1, e.target.result.length);
+                                var fileName = theFile.name;
+                                var fileType = theFile.type;
+
+                                console.log(fileName);
+                                console.log(fileType);
+
+                                var _genericmedia = new genericmedia({
+                                    media_id: model.get("media_id"),
+                                    filedata: getStackMobBinaryString(fileName, fileType, base64Content),
+                                    fileextension: fileName.substring(fileName.indexOf(".")+1),
+                                    filename: fileName.substring(fileName.indexOf("."),0)
+
+                                });
+
+                                _genericmedia.create({
+                                    success: function(model) {
+                                        $("#status").html("");
+                                        window.location.reload();
+                                    },
+                                    error: function(model, response) {
+                                        alert( "Generic media creation was unsuccessful." );
+                                    }
+                                });
+
+                                /*
+                                _genericmedia.setBinaryFile('filedata', fileName, fileType, base64Content);
+                                _genericmedia.save({
+                                    success: function(model) {
+                                        $("#status").html("");
+                                    },
+                                    error: function(model, response) {
+                                        alert( "Unable to save file." );
+                                        $("#status").html("failed");
+                                    }
+                                });   */
+
+                            };
+                        })(f);
+
+                        // Read in the file as a data URL
+                        fileContent = reader.readAsDataURL(f);
+
+                    }
+
+                    //--------
+
+
+
+                },
+                error: function(model, response) {
+                    alert( "Media record creation was unsuccessful." );
+                }
+            });
+        }
+
+
+
+        function del( id, m_id ) {
+
+            var _media = new media({media_id: m_id});
+            _media.destroy({
+                success: function(model) {
+                    var row = new genericmedia({genericmedia_id: id});
+                    row.destroy({
+                        success: function(model) {
+                            window.location.reload();
+                        },
+                        error: function(model, response) {
+                            alert( "Unable to delete genericmedia entry." );
+                        }
+                    });
+                },
+                error: function(model, response) {
+                    alert( "Unable to delete media entry." );
+                }
+            });
+        }
+        </script>
+    <title></title>
+</head>
+<body>
+    <h1>Media Management:</h1>
+    <div id="media"></div>
+    <script type="text/javascript">
+        user = new StackMob.User({ username: StackMob.getLoggedInUser() });
+
+        media = StackMob.Model.extend({
+            schemaName: 'media'
+        });
+
+
+
+        //Presuming ChatMessage has been defined earlier...
+        //Define your Todo class once on the page.
+        genericmedia = StackMob.Model.extend({
+            schemaName: 'genericmedia'
+        });
+
+        var _genericmedia = new genericmedia();
+
+        _genericmedia.fetch({
+            success: function(model) {
+
+                $.each(model.toJSON(), function(key, value) {
+                    $("#media").append(key + ': <ul></ul>');
+
+                    $.each(value, function(key1, value1) {
+                        $("#media ul:last-child").append($('<li>', {
+                            text: key1 + ": " + value1
+                        }));
+                    });
+
+                    a = value["genericmedia_id"];
+                    b = value["media_id"];
+                    $("#media ul:last-child").append('<input type="button" onclick="del(\''+a+'\', \'' + b + '\');" value="Delete"/>');
+                });
+
+
+
+            },
+            error: function(model, response) {alert("fail");}
+        });
+
+    </script>
+    <input type="button" onclick="profile()" value="Profile">
+    Upload: <input type="file" id="files" name="files[]" multiple />
+    <script type="text/javascript">
+        document.getElementById('files').addEventListener('change', handleFileSelect, false);
+    </script>
+    <br>
+    Status: <div id="status"></div>
+</body>
+</html>

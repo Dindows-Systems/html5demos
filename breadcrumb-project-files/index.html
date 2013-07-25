@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Graceful Breadcrumb Navigation Menu[DEMO]</title>
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+</head>
+
+<body>
+	<div id="topbar" class="clearfix">
+		<h2><img src="img/logo.png" alt="MyBlog Logo" /></h2>
+		
+		<div class="search">
+			<form name="sform" id="sform" action="#" method="GET">
+				<input autocomplete="off" type="text" name="s" id="s" spellcheck="false" />
+			</form>
+		</div>
+	</div>
+	
+	<div id="content" class="clearfix">
+		<h3>Crumbly</h3>
+		
+		<!-- with images -->
+		<div id="breadcrumb">
+			<ul class="crumbs">
+				<li class="first"><a href="#" style="z-index:9;"><span></span>Blog Home</a></li>
+				<li><a href="#" style="z-index:8;">Archives</a></li>
+				<li><a href="#" style="z-index:7;">2011 Writing</a></li>
+				<li><a href="#" style="z-index:6;">Tips for jQuery Development in HTML5</a></li>
+			</ul>
+		</div>
+		
+		<div class="space"></div>
+		
+		
+		<h3>Without Images</h3>
+		
+		<!-- graceful degrade -->
+		<div id="breadcrumb2">
+			<ul class="crumbs2">
+				<li class="first"><a href="#">Blog Home</a></li>
+				<li><a href="#">Archives</a></li>
+				<li><a href="#">2011 Writing</a></li>
+				<li class="last"><a href="#">Tips for jQuery Development in HTML5</a></li>				
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
